@@ -6,57 +6,16 @@ package main
 
 import (
 	"bytes"
-	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 	"sort"
 	"strconv"
 	"strings"
 	"time"
+
+	"go-lmu-api/lib"
 )
-
-type Standing struct {
-	Position         int     `json:"position"`
-	CarNumber        string  `json:"carNumber"`
-	DriverName       string  `json:"driverName"`
-	FullTeamName     string  `json:"fullTeamName"`
-	VehicleName      string  `json:"vehicleName"`
-	CarClass         string  `json:"carClass"`
-	LapsCompleted    int     `json:"lapsCompleted"`
-	LastLapTime      float64 `json:"lastLapTime"`
-	BestLapTime      float64 `json:"bestLapTime"`
-	TimeBehindLeader float64 `json:"timeBehindLeader"`
-	TimeBehindNext   float64 `json:"timeBehindNext"`
-	LapsBehindLeader int     `json:"lapsBehindLeader"`
-	Pitstops         int     `json:"pitstops"`
-	PitState         string  `json:"pitState"`
-	Player           bool    `json:"player"`
-	InGarageStall    bool    `json:"inGarageStall"`
-	SlotID           int     `json:"slotID"`
-	CarVelocity      struct {
-		Velocity float64 `json:"velocity"`
-	} `json:"carVelocity"`
-}
-
-type HistoryLap struct {
-	SlotID      int     `json:"slotID"`
-	Position    int     `json:"position"`
-	SectorTime1 float64 `json:"sectorTime1"`
-	SectorTime2 float64 `json:"sectorTime2"`
-	LapTime     float64 `json:"lapTime"`
-	Pitting     bool    `json:"pitting"`
-	DriverName  string  `json:"driverName"`
-	CarClass    string  `json:"carClass"`
-	VehicleName string  `json:"vehicleName"`
-	TotalLaps   int     `json:"totalLaps"`
-}
-
-type SessionInfo struct {
-	Session string `json:"session"`
-}
 
 var maxSpeeds = map[int]float64{}
 
@@ -65,111 +24,104 @@ func main() {
 	interval := flag.Duration("interval", 1*time.Second, "Poll interval")
 	flag.Parse()
 
-	client := &http.Client{Timeout: 5 * time.Second}
+	client := lib.NewClient(*baseURL)
 
 	// Initial clear + hide cursor
 	fmt.Print("\033[2J\033[?25l")
-	defer fmt.Print("\033[?25h") // restore cursor on exit
+	defer fmt.Print("\033[?25h")
 
 	for {
-		standings, err := fetchStandings(client, *baseURL)
+		standings, err := client.RestWatchStandings()
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "\rError: %v", err)
 			time.Sleep(*interval)
 			continue
 		}
-		history, _ := fetchHistory(client, *baseURL)
-		var si SessionInfo
-		fetchJSON(client, *baseURL+"/rest/watch/sessionInfo", &si)
-		render(standings, history, si)
+
+		historyRaw, _ := client.RestWatchStandingsHistory()
+		history := convertHistory(historyRaw)
+
+		si, _ := client.RestWatchSessionInfo()
+		var session string
+		if si != nil {
+			session = si.Session
+		}
+
+		render(standings, history, session)
 		time.Sleep(*interval)
 	}
 }
 
-func fetchJSON(client *http.Client, url string, target interface{}) error {
-	resp, err := client.Get(url)
-	if err != nil {
-		return err
+func convertHistory(raw *map[string][]lib.RestWatchStandingsHistoryResponseItemItem) map[int][]lib.RestWatchStandingsHistoryResponseItemItem {
+	if raw == nil {
+		return nil
 	}
-	defer resp.Body.Close()
-	body, _ := io.ReadAll(resp.Body)
-	if resp.StatusCode != 200 {
-		return fmt.Errorf("HTTP %d", resp.StatusCode)
-	}
-	return json.Unmarshal(body, target)
-}
-
-func fetchStandings(client *http.Client, base string) ([]Standing, error) {
-	var s []Standing
-	err := fetchJSON(client, base+"/rest/watch/standings", &s)
-	return s, err
-}
-
-func fetchHistory(client *http.Client, base string) (map[int][]HistoryLap, error) {
-	var raw map[string][]HistoryLap
-	if err := fetchJSON(client, base+"/rest/watch/standings/history", &raw); err != nil {
-		return nil, err
-	}
-	result := make(map[int][]HistoryLap, len(raw))
-	for k, v := range raw {
+	result := make(map[int][]lib.RestWatchStandingsHistoryResponseItemItem, len(*raw))
+	for k, v := range *raw {
 		id, _ := strconv.Atoi(k)
 		result[id] = v
 	}
-	return result, nil
+	return result
 }
 
-func lastLapFromHistory(laps []HistoryLap) (s1, s2, s3, lap float64) {
+func lastLapFromHistory(laps []lib.RestWatchStandingsHistoryResponseItemItem) (s1, s2, s3 float64) {
 	for i := len(laps) - 1; i >= 0; i-- {
 		l := laps[i]
 		if l.LapTime > 0 && l.SectorTime1 > 0 && l.SectorTime2 > 0 {
 			s1 = l.SectorTime1
 			s2 = l.SectorTime2 - l.SectorTime1
 			s3 = l.LapTime - l.SectorTime2
-			lap = l.LapTime
 			return
 		}
 	}
 	return
 }
 
-func isRaceSession(si SessionInfo) bool {
-	s := strings.ToUpper(si.Session)
-	return strings.Contains(s, "RACE")
+func isRaceSession(session string) bool {
+	return strings.Contains(strings.ToUpper(session), "RACE")
 }
 
-func render(standings []Standing, history map[int][]HistoryLap, si SessionInfo) {
+func render(standings []lib.RestWatchStandingsResponseItem, history map[int][]lib.RestWatchStandingsHistoryResponseItemItem, session string) {
 	sort.Slice(standings, func(i, j int) bool {
 		return standings[i].Position < standings[j].Position
 	})
 
-	classCount := map[string]int{}
+	classCount := map[int]int{}
 	pic := map[int]int{}
 	for _, s := range standings {
-		classCount[s.CarClass]++
-		pic[s.SlotID] = classCount[s.CarClass]
+		classCount[int(s.Position)]++
+	}
+	// Recompute PIC by iterating sorted standings grouped by class
+	classPosCounter := map[string]int{}
+	for _, s := range standings {
+		classPosCounter[s.CarClass]++
+		pic[int(s.SlotID)] = classPosCounter[s.CarClass]
 	}
 
 	for _, s := range standings {
 		spd := s.CarVelocity.Velocity * 3.6
-		if spd > maxSpeeds[s.SlotID] {
-			maxSpeeds[s.SlotID] = spd
+		slot := int(s.SlotID)
+		if spd > maxSpeeds[slot] {
+			maxSpeeds[slot] = spd
 		}
 	}
 
-	race := isRaceSession(si)
+	race := isRaceSession(session)
 
-	// Compute gaps: in race use timeBehindLeader, otherwise use best lap delta to P1
 	var leaderBest float64
 	if !race && len(standings) > 0 {
 		leaderBest = standings[0].BestLapTime
 	}
 
-	// Build entire frame into a buffer, then write once
 	var buf bytes.Buffer
 
-	fmt.Fprintf(&buf, "\033[H") // cursor home
+	fmt.Fprintf(&buf, "\033[H")
+	sessionLabel := session
+	if sessionLabel == "" {
+		sessionLabel = "---"
+	}
 	fmt.Fprintf(&buf, "  LMU Live  |  %s  |  %s  |  %d cars\033[K\n\n",
-		strings.ToUpper(si.Session), time.Now().Format("15:04:05"), len(standings))
+		strings.ToUpper(sessionLabel), time.Now().Format("15:04:05"), len(standings))
 
 	hdr := fmt.Sprintf(
 		"%3s %4s  %-16s %-22s %-5s %3s %4s %8s %7s %7s %7s %8s %8s %5s %3s",
@@ -179,6 +131,8 @@ func render(standings []Standing, history map[int][]HistoryLap, si SessionInfo) 
 	fmt.Fprintf(&buf, "%s\033[K\n", strings.Repeat("─", len(hdr)))
 
 	for _, s := range standings {
+		slot := int(s.SlotID)
+
 		carNum := s.CarNumber
 		if carNum == "" {
 			carNum = extractCarNum(s.VehicleName)
@@ -192,25 +146,22 @@ func render(standings []Standing, history map[int][]HistoryLap, si SessionInfo) 
 		driver := truncate(s.DriverName, 22)
 
 		var s1, s2, s3 float64
-		if laps, ok := history[s.SlotID]; ok && len(laps) > 0 {
-			s1, s2, s3, _ = lastLapFromHistory(laps)
+		if laps, ok := history[slot]; ok && len(laps) > 0 {
+			s1, s2, s3 = lastLapFromHistory(laps)
 		}
 
-		// Gap computation
 		var gap string
 		if s.Position == 1 {
 			gap = "     ---"
 		} else if race {
-			// Race: use timeBehindLeader (laps behind shown as +NL)
 			if s.LapsBehindLeader > 0 {
-				gap = fmt.Sprintf("   +%dL", s.LapsBehindLeader)
+				gap = fmt.Sprintf("   +%.0fL", s.LapsBehindLeader)
 			} else if s.TimeBehindLeader > 0 {
 				gap = fmtGap(s.TimeBehindLeader)
 			} else {
 				gap = "     ---"
 			}
 		} else {
-			// Practice/Quali: show best lap delta to P1's best
 			if leaderBest > 0 && s.BestLapTime > 0 {
 				delta := s.BestLapTime - leaderBest
 				if delta > 0.001 {
@@ -223,43 +174,42 @@ func render(standings []Standing, history map[int][]HistoryLap, si SessionInfo) 
 			}
 		}
 
-		status := ""
-		if s.PitState != "NONE" || s.InGarageStall {
-			status = " PIT"
-		}
-
 		marker := " "
 		if s.Player {
 			marker = ">"
 		}
 
+		status := ""
+		if s.PitState != "NONE" || s.InGarageStall {
+			status = " PIT"
+		}
+
 		line := fmt.Sprintf(
-			"%s%2d %4s  %-16s %-22s %-5s %3d %4d %8s %7s %7s %7s %8s %8s %5.0f %3d%s",
+			"%s%2.0f %4s  %-16s %-22s %-5s %3d %4.0f %8s %7s %7s %7s %8s %8s %5.0f %3.0f%s",
 			marker,
 			s.Position,
 			carNum,
 			team,
 			driver,
 			s.CarClass,
-			pic[s.SlotID],
+			pic[slot],
 			s.LapsCompleted,
 			gap,
 			fmtSec(s1), fmtSec(s2), fmtSec(s3),
 			fmtLap(s.LastLapTime),
 			fmtLap(s.BestLapTime),
-			maxSpeeds[s.SlotID],
+			maxSpeeds[slot],
 			s.Pitstops,
 			status,
 		)
 
 		if s.Player {
-			// Bright cyan foreground + bold
 			fmt.Fprintf(&buf, "\033[1;36m%s\033[0m\033[K\n", line)
 		} else {
 			fmt.Fprintf(&buf, "%s\033[K\n", line)
 		}
 	}
-	fmt.Fprintf(&buf, "\033[J") // clear below
+	fmt.Fprintf(&buf, "\033[J")
 
 	os.Stdout.Write(buf.Bytes())
 }

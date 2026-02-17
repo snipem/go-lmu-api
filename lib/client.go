@@ -57,14 +57,6 @@ func (c *Client) PostRestCancelSteamAuth() (json.RawMessage, error) {
 	return data, nil
 }
 
-func (c *Client) PostRestChat() (json.RawMessage, error) {
-	data, err := c.doRequest("POST", "/rest/chat/", nil)
-	if err != nil {
-		return nil, err
-	}
-	return data, nil
-}
-
 func (c *Client) RestChat() ([]interface{}, error) {
 	data, err := c.doRequest("GET", "/rest/chat/", nil)
 	if err != nil {
@@ -75,6 +67,14 @@ func (c *Client) RestChat() ([]interface{}, error) {
 		return nil, err
 	}
 	return result, nil
+}
+
+func (c *Client) PostRestChat() (json.RawMessage, error) {
+	data, err := c.doRequest("POST", "/rest/chat/", nil)
+	if err != nil {
+		return nil, err
+	}
+	return data, nil
 }
 
 func (c *Client) PutRestGarage() (json.RawMessage, error) {
@@ -273,14 +273,6 @@ func (c *Client) PostRestGarageRefreshSetups(body interface{}) (json.RawMessage,
 	return data, nil
 }
 
-func (c *Client) PutRestGarageSetup(body interface{}) (json.RawMessage, error) {
-	data, err := c.doRequest("PUT", "/rest/garage/setup", body)
-	if err != nil {
-		return nil, err
-	}
-	return data, nil
-}
-
 func (c *Client) RestGarageSetup() ([]RestGarageSetupResponseItem, error) {
 	data, err := c.doRequest("GET", "/rest/garage/setup", nil)
 	if err != nil {
@@ -295,6 +287,14 @@ func (c *Client) RestGarageSetup() ([]RestGarageSetupResponseItem, error) {
 
 func (c *Client) PostRestGarageSetup(body interface{}) (json.RawMessage, error) {
 	data, err := c.doRequest("POST", "/rest/garage/setup", body)
+	if err != nil {
+		return nil, err
+	}
+	return data, nil
+}
+
+func (c *Client) PutRestGarageSetup(body interface{}) (json.RawMessage, error) {
+	data, err := c.doRequest("PUT", "/rest/garage/setup", body)
 	if err != nil {
 		return nil, err
 	}
@@ -1553,12 +1553,12 @@ func (c *Client) RestStrategyUsage() (*RestStrategyUsageResponse, error) {
 	return &result, nil
 }
 
-func (c *Client) RestWatchFocus() (int64, error) {
+func (c *Client) RestWatchFocus() (float64, error) {
 	data, err := c.doRequest("GET", "/rest/watch/focus", nil)
 	if err != nil {
 		return 0, err
 	}
-	var result int64
+	var result float64
 	if err := json.Unmarshal(data, &result); err != nil {
 		return 0, err
 	}

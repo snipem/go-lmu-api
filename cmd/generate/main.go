@@ -66,10 +66,6 @@ func jsonToGoType(name string, v interface{}, structs map[string]string) string 
 	case bool:
 		return "bool"
 	case float64:
-		// JSON numbers: check if it looks like an int
-		if val == float64(int64(val)) {
-			return "int64"
-		}
 		return "float64"
 	case string:
 		return "string"

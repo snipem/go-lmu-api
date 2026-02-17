@@ -10,7 +10,7 @@ type NavigationGetLoadingScreenResponseSelectedCar struct {
 	Classes          []string                                                   `json:"classes"`
 	ClassesOverride  string                                                     `json:"classesOverride"`
 	Desc             string                                                     `json:"desc"`
-	DlcAppID         int64                                                      `json:"dlcAppID"`
+	DlcAppID         float64                                                    `json:"dlcAppID"`
 	Drivers          []NavigationGetLoadingScreenResponseSelectedCarDriversItem `json:"drivers"`
 	Engine           string                                                     `json:"engine"`
 	FullPathTree     string                                                     `json:"fullPathTree"`
@@ -20,7 +20,7 @@ type NavigationGetLoadingScreenResponseSelectedCar struct {
 	LiveryName       string                                                     `json:"liveryName"`
 	Manufacturer     string                                                     `json:"manufacturer"`
 	Number           string                                                     `json:"number"`
-	PremID           int64                                                      `json:"premID"`
+	PremID           float64                                                    `json:"premID"`
 	PrimaryVehFile   bool                                                       `json:"primaryVehFile"`
 	Sig              string                                                     `json:"sig"`
 	Team             string                                                     `json:"team"`
@@ -40,15 +40,15 @@ type NavigationGetLoadingScreenResponseTrackInfo struct {
 	CmpName                  string                                                                  `json:"cmpName"`
 	Corners                  string                                                                  `json:"corners"`
 	CountryCode              string                                                                  `json:"countryCode"`
-	DefaultPracticeStartTime int64                                                                   `json:"defaultPracticeStartTime"`
+	DefaultPracticeStartTime float64                                                                 `json:"defaultPracticeStartTime"`
 	DefaultPracticeWeather   []NavigationGetLoadingScreenResponseTrackInfoDefaultPracticeWeatherItem `json:"defaultPracticeWeather"`
-	DefaultQualifyStartTime  int64                                                                   `json:"defaultQualifyStartTime"`
+	DefaultQualifyStartTime  float64                                                                 `json:"defaultQualifyStartTime"`
 	DefaultQualifyWeather    []NavigationGetLoadingScreenResponseTrackInfoDefaultQualifyWeatherItem  `json:"defaultQualifyWeather"`
-	DefaultRaceLengthLaps    int64                                                                   `json:"defaultRaceLengthLaps"`
-	DefaultRaceLengthTime    int64                                                                   `json:"defaultRaceLengthTime"`
-	DefaultRaceStartTime     int64                                                                   `json:"defaultRaceStartTime"`
+	DefaultRaceLengthLaps    float64                                                                 `json:"defaultRaceLengthLaps"`
+	DefaultRaceLengthTime    float64                                                                 `json:"defaultRaceLengthTime"`
+	DefaultRaceStartTime     float64                                                                 `json:"defaultRaceStartTime"`
 	DefaultRaceWeather       []NavigationGetLoadingScreenResponseTrackInfoDefaultRaceWeatherItem     `json:"defaultRaceWeather"`
-	DlcAppID                 int64                                                                   `json:"dlcAppID"`
+	DlcAppID                 float64                                                                 `json:"dlcAppID"`
 	EventName                string                                                                  `json:"eventName"`
 	GrandPrixName            string                                                                  `json:"grandPrixName"`
 	Id                       string                                                                  `json:"id"`
@@ -57,7 +57,7 @@ type NavigationGetLoadingScreenResponseTrackInfo struct {
 	Location                 string                                                                  `json:"location"`
 	OfficialEvent            bool                                                                    `json:"officialEvent"`
 	OpeningYear              string                                                                  `json:"openingYear"`
-	PremId                   int64                                                                   `json:"premId"`
+	PremId                   float64                                                                 `json:"premId"`
 	ProperTrackName          string                                                                  `json:"properTrackName"`
 	SceneDesc                string                                                                  `json:"sceneDesc"`
 	SceneSig                 string                                                                  `json:"sceneSig"`
@@ -69,36 +69,36 @@ type NavigationGetLoadingScreenResponseTrackInfo struct {
 }
 
 type NavigationGetLoadingScreenResponseTrackInfoDefaultPracticeWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type NavigationGetLoadingScreenResponseTrackInfoDefaultQualifyWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type NavigationGetLoadingScreenResponseTrackInfoDefaultRaceWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type NavigationGetReferrerResponse struct {
@@ -113,16 +113,16 @@ type NavigationStateResponse struct {
 type NavigationStateResponseLoadingStatus struct {
 	Loading     bool                                      `json:"loading"`
 	LoadingData string                                    `json:"loadingData"`
-	Percentage  int64                                     `json:"percentage"`
+	Percentage  float64                                   `json:"percentage"`
 	Track       NavigationStateResponseLoadingStatusTrack `json:"track"`
 }
 
 type NavigationStateResponseLoadingStatusTrack struct {
 	DisplayProperties map[string]interface{} `json:"displayProperties"`
-	DlcappID          int64                  `json:"dlcappID"`
+	DlcappID          float64                `json:"dlcappID"`
 	Length            string                 `json:"length"`
 	Owned             bool                   `json:"owned"`
-	PremId            int64                  `json:"premId"`
+	PremId            float64                `json:"premId"`
 	SceneDesc         string                 `json:"sceneDesc"`
 	Sig               string                 `json:"sig"`
 	Track             string                 `json:"track"`
@@ -131,7 +131,7 @@ type NavigationStateResponseLoadingStatusTrack struct {
 }
 
 type NavigationStateResponseState struct {
-	AppBuild            int64                            `json:"appBuild"`
+	AppBuild            float64                          `json:"appBuild"`
 	GamePhase           string                           `json:"gamePhase"`
 	GameSession         string                           `json:"gameSession"`
 	GameState           string                           `json:"gameState"`
@@ -323,2242 +323,2242 @@ type RestGarageGetPlayerGarageDataResponse struct {
 }
 
 type RestGarageGetPlayerGarageDataResponseGearGraph struct {
-	KiloRPM         []int64 `json:"kiloRPM"`
-	NumForwardGears int64   `json:"numForwardGears"`
-	TopSpeed        []int64 `json:"topSpeed"`
-	Unit            string  `json:"unit"`
+	KiloRPM         []float64 `json:"kiloRPM"`
+	NumForwardGears float64   `json:"numForwardGears"`
+	TopSpeed        []float64 `json:"topSpeed"`
+	Unit            string    `json:"unit"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMANTILOCKBRAKES struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMANTILOCKBRAKESYSTEMMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMBRAKEBALANCE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMBRAKEDUCTS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMBRAKEDUCTSREAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMBRAKEMIGRATION struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ00 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ01 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ02 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ03 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ04 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ05 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ06 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ07 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ08 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ09 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ10 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMCHASSISADJ11 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMDIFFCOAST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMDIFFPOWER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMDIFFPRELOAD struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMDIFFPUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMELECTRICMOTORMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMENGINEBOOST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMENGINEBRAKEMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMENGINEMIXTURE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDFASTBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDFASTREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDPACKERS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDSLOWBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDSLOWREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDTENDERSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONT3RDTENDERSPRINGTRAVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTANTISWAY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTDIFFCOAST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTDIFFPOWER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTDIFFPRELOAD struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTDIFFPUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTTIRECOMPOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTTOEIN struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTTOEOFFSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTWHEELTRACK struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFRONTWING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFUELCAPACITY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMFUELLEVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR4 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR5 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR6 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR7 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR8 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEAR9 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARAUTODOWNSHIFT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARAUTOUPSHIFT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARFINAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARREVERSE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM4 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM5 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM6 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM7 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMGEARUPSHIFTRPM8 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMHANDBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMHANDFRONTBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMLEFTCASTER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMLEFTFENDERFLARE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMLEFTTRACKBAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMNUMPITSTOPS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMOILRADIATOR struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMPITSTOP1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMPITSTOP2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMPITSTOP3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMRATIOSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDFASTBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDFASTREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDPACKERS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDSLOWBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDSLOWREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDTENDERSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREAR3RDTENDERSPRINGTRAVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARANTISWAY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARTIRECOMPOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARTOEIN struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARTOEOFFSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARWHEELTRACK struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREARWING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREGENLEVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMREVLIMITER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMRIGHTCASTER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMRIGHTFENDERFLARE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMRIGHTTRACKBAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMSTEERLOCK struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMTORQUESPLIT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMTRACTIONCONTROL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMTRACTIONCONTROLMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMTRACTIONCONTROLPOWERCUTMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMTRACTIONCONTROLSLIPANGLEMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMVIRTUALENERGY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMWATERRADIATOR struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMWEIGHTDISTRIB struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMWEIGHTLATERAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMWEIGHTVERTICAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseVMWEIGHTWEDGE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEDISCWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEDISCWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEDISCWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEDISCWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEPADWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEPADWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEPADWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMBRAKEPADWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCAMBERWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCAMBERWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCAMBERWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCAMBERWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCOMPOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCOMPOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCOMPOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMCOMPOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTBUMPWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTBUMPWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTBUMPWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTBUMPWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTREBOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTREBOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTREBOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMFASTREBOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPACKERSWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPACKERSWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPACKERSWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPACKERSWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPRESSUREWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPRESSUREWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPRESSUREWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMPRESSUREWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMRIDEHEIGHTWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMRIDEHEIGHTWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMRIDEHEIGHTWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMRIDEHEIGHTWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWBUMPWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWBUMPWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWBUMPWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWBUMPWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWREBOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWREBOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWREBOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSLOWREBOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSPRINGWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSPRINGWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSPRINGWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSPRINGWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSRUBBERWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSRUBBERWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSRUBBERWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMSRUBBERWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGTRAVELWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGTRAVELWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGTRAVELWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGTRAVELWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetPlayerGarageDataResponseWMTENDERSPRINGWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageGetVehicleConditionResponse struct {
-	BrakeCondition   []int64 `json:"brakeCondition"`
-	Fuel             int64   `json:"fuel"`
-	FuelCapacity     int64   `json:"fuelCapacity"`
-	SuspensionDamage []int64 `json:"suspensionDamage"`
-	TireCondition    []int64 `json:"tireCondition"`
-	VehicleDamage    int64   `json:"vehicleDamage"`
+	BrakeCondition   []float64 `json:"brakeCondition"`
+	Fuel             float64   `json:"fuel"`
+	FuelCapacity     float64   `json:"fuelCapacity"`
+	SuspensionDamage []float64 `json:"suspensionDamage"`
+	TireCondition    []float64 `json:"tireCondition"`
+	VehicleDamage    float64   `json:"vehicleDamage"`
 }
 
 type RestGaragePitMenuReceivePitMenuResponseItem struct {
-	PMCValue       int64                                                     `json:"PMC Value"`
-	CurrentSetting int64                                                     `json:"currentSetting"`
-	Default        int64                                                     `json:"default"`
+	PMCValue       float64                                                   `json:"PMC Value"`
+	CurrentSetting float64                                                   `json:"currentSetting"`
+	Default        float64                                                   `json:"default"`
 	Name           string                                                    `json:"name"`
 	Settings       []RestGaragePitMenuReceivePitMenuResponseItemSettingsItem `json:"settings"`
 }
@@ -2568,11 +2568,11 @@ type RestGaragePitMenuReceivePitMenuResponseItemSettingsItem struct {
 }
 
 type RestGarageSetupResponseItem struct {
-	Created          string `json:"created"`
-	Modified         string `json:"modified"`
-	Name             string `json:"name"`
-	NumDiffUpgrades  int64  `json:"numDiffUpgrades"`
-	SameVehicleClass bool   `json:"sameVehicleClass"`
+	Created          string  `json:"created"`
+	Modified         string  `json:"modified"`
+	Name             string  `json:"name"`
+	NumDiffUpgrades  float64 `json:"numDiffUpgrades"`
+	SameVehicleClass bool    `json:"sameVehicleClass"`
 }
 
 type RestGarageSummaryResponse struct {
@@ -2590,7 +2590,7 @@ type RestGarageSummaryResponse struct {
 
 type RestGarageSummaryResponseCar struct {
 	DisplayProperties RestGarageSummaryResponseCarDisplayProperties `json:"displayProperties"`
-	DlcappID          int64                                         `json:"dlcappID"`
+	DlcappID          float64                                       `json:"dlcappID"`
 	Engine            string                                        `json:"engine"`
 	FullPathTree      string                                        `json:"fullPathTree"`
 	Id                string                                        `json:"id"`
@@ -2598,7 +2598,7 @@ type RestGarageSummaryResponseCar struct {
 	Manufacturer      string                                        `json:"manufacturer"`
 	Name              string                                        `json:"name"`
 	Owned             bool                                          `json:"owned"`
-	PremId            int64                                         `json:"premId"`
+	PremId            float64                                       `json:"premId"`
 	Sig               string                                        `json:"sig"`
 	Thumbnail         string                                        `json:"thumbnail"`
 	VehFile           string                                        `json:"vehFile"`
@@ -2624,64 +2624,64 @@ type RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONT struct {
 	VMFRONTWING     RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMFRONTWING     `json:"VM_FRONT_WING"`
 	VMOILRADIATOR   RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMOILRADIATOR   `json:"VM_OIL_RADIATOR"`
 	VMWATERRADIATOR RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMWATERRADIATOR `json:"VM_WATER_RADIATOR"`
-	DiffCount       int64                                                                     `json:"diffCount"`
+	DiffCount       float64                                                                   `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMFRONTWING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMOILRADIATOR struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesAERODYNAMICSFRONTVMWATERRADIATOR struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesAERODYNAMICSREAR struct {
 	VMREARWING RestGarageSummaryResponseSettingSummariesAERODYNAMICSREARVMREARWING `json:"VM_REAR_WING"`
-	DiffCount  int64                                                               `json:"diffCount"`
+	DiffCount  float64                                                             `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesAERODYNAMICSREARVMREARWING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINE struct {
@@ -2691,85 +2691,85 @@ type RestGarageSummaryResponseSettingSummariesENGINE struct {
 	VMENGINEMIXTURE    RestGarageSummaryResponseSettingSummariesENGINEVMENGINEMIXTURE    `json:"VM_ENGINE_MIXTURE"`
 	VMREGENLEVEL       RestGarageSummaryResponseSettingSummariesENGINEVMREGENLEVEL       `json:"VM_REGEN_LEVEL"`
 	VMREVLIMITER       RestGarageSummaryResponseSettingSummariesENGINEVMREVLIMITER       `json:"VM_REV_LIMITER"`
-	DiffCount          int64                                                             `json:"diffCount"`
+	DiffCount          float64                                                           `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMELECTRICMOTORMAP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMENGINEBOOST struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMENGINEBRAKEMAP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMENGINEMIXTURE struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMREGENLEVEL struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesENGINEVMREVLIMITER struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARS struct {
@@ -2795,293 +2795,293 @@ type RestGarageSummaryResponseSettingSummariesGEARS struct {
 	VMGEARUPSHIFTRPM7   RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM7   `json:"VM_GEAR_UPSHIFT_RPM_7"`
 	VMGEARUPSHIFTRPM8   RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM8   `json:"VM_GEAR_UPSHIFT_RPM_8"`
 	VMRATIOSET          RestGarageSummaryResponseSettingSummariesGEARSVMRATIOSET          `json:"VM_RATIO_SET"`
-	DiffCount           int64                                                             `json:"diffCount"`
+	DiffCount           float64                                                           `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR1 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR2 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR3 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR4 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR5 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR6 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR7 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR8 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEAR9 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARAUTODOWNSHIFT struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARAUTOUPSHIFT struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARFINAL struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARREVERSE struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM1 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM2 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM3 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM4 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM5 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM6 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM7 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMGEARUPSHIFTRPM8 struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesGEARSVMRATIOSET struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONT struct {
@@ -3113,371 +3113,371 @@ type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONT struct {
 	WMSRUBBERWFR           RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSRUBBERWFR           `json:"WM_SRUBBER-W_FR"`
 	WMTENDERSPRINGWFL      RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMTENDERSPRINGWFL      `json:"WM_TENDERSPRING-W_FL"`
 	WMTENDERSPRINGWFR      RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMTENDERSPRINGWFR      `json:"WM_TENDERSPRING-W_FR"`
-	DiffCount              int64                                                                          `json:"diffCount"`
+	DiffCount              float64                                                                        `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDFASTBUMP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDFASTREBOUND struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDPACKERS struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDSLOWBUMP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDSLOWREBOUND struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDSPRING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONT3RDTENDERSPRING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONTANTISWAY struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONTTOEIN struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTVMFRONTTOEOFFSET struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMFASTBUMPWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMFASTBUMPWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMFASTREBOUNDWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMFASTREBOUNDWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMPACKERSWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMPACKERSWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMRIDEHEIGHTWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMRIDEHEIGHTWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSLOWBUMPWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSLOWBUMPWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSLOWREBOUNDWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSLOWREBOUNDWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSPRINGWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSPRINGWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSRUBBERWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMSRUBBERWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMTENDERSPRINGWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONFRONTWMTENDERSPRINGWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREAR struct {
@@ -3509,371 +3509,371 @@ type RestGarageSummaryResponseSettingSummariesSUSPENSIONREAR struct {
 	WMSRUBBERWRR          RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSRUBBERWRR          `json:"WM_SRUBBER-W_RR"`
 	WMTENDERSPRINGWRL     RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMTENDERSPRINGWRL     `json:"WM_TENDERSPRING-W_RL"`
 	WMTENDERSPRINGWRR     RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMTENDERSPRINGWRR     `json:"WM_TENDERSPRING-W_RR"`
-	DiffCount             int64                                                                        `json:"diffCount"`
+	DiffCount             float64                                                                      `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDFASTBUMP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDFASTREBOUND struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDPACKERS struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDSLOWBUMP struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDSLOWREBOUND struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDSPRING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREAR3RDTENDERSPRING struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREARANTISWAY struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREARTOEIN struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARVMREARTOEOFFSET struct {
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMFASTBUMPWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMFASTBUMPWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMFASTREBOUNDWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMFASTREBOUNDWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMPACKERSWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMPACKERSWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMRIDEHEIGHTWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMRIDEHEIGHTWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSLOWBUMPWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSLOWBUMPWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSLOWREBOUNDWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSLOWREBOUNDWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSPRINGWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSPRINGWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSRUBBERWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMSRUBBERWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMTENDERSPRINGWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesSUSPENSIONREARWMTENDERSPRINGWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONT struct {
@@ -3883,85 +3883,85 @@ type RestGarageSummaryResponseSettingSummariesTIRESFRONT struct {
 	WMCOMPOUNDWFR RestGarageSummaryResponseSettingSummariesTIRESFRONTWMCOMPOUNDWFR `json:"WM_COMPOUND-W_FR"`
 	WMPRESSUREWFL RestGarageSummaryResponseSettingSummariesTIRESFRONTWMPRESSUREWFL `json:"WM_PRESSURE-W_FL"`
 	WMPRESSUREWFR RestGarageSummaryResponseSettingSummariesTIRESFRONTWMPRESSUREWFR `json:"WM_PRESSURE-W_FR"`
-	DiffCount     int64                                                            `json:"diffCount"`
+	DiffCount     float64                                                          `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMCAMBERWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMCAMBERWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMCOMPOUNDWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMCOMPOUNDWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMPRESSUREWFL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESFRONTWMPRESSUREWFR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREAR struct {
@@ -3971,96 +3971,96 @@ type RestGarageSummaryResponseSettingSummariesTIRESREAR struct {
 	WMCOMPOUNDWRR RestGarageSummaryResponseSettingSummariesTIRESREARWMCOMPOUNDWRR `json:"WM_COMPOUND-W_RR"`
 	WMPRESSUREWRL RestGarageSummaryResponseSettingSummariesTIRESREARWMPRESSUREWRL `json:"WM_PRESSURE-W_RL"`
 	WMPRESSUREWRR RestGarageSummaryResponseSettingSummariesTIRESREARWMPRESSUREWRR `json:"WM_PRESSURE-W_RR"`
-	DiffCount     int64                                                           `json:"diffCount"`
+	DiffCount     float64                                                         `json:"diffCount"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMCAMBERWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMCAMBERWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMCOMPOUNDWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMCOMPOUNDWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMPRESSUREWRL struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseSettingSummariesTIRESREARWMPRESSUREWRR struct {
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
-	WheelLoc             string `json:"wheelLoc"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
+	WheelLoc             string  `json:"wheelLoc"`
 }
 
 type RestGarageSummaryResponseTrack struct {
 	DisplayProperties RestGarageSummaryResponseTrackDisplayProperties `json:"displayProperties"`
-	DlcappID          int64                                           `json:"dlcappID"`
+	DlcappID          float64                                         `json:"dlcappID"`
 	Id                string                                          `json:"id"`
 	Image             string                                          `json:"image"`
 	Length            string                                          `json:"length"`
 	Name              string                                          `json:"name"`
 	Owned             bool                                            `json:"owned"`
-	PremId            int64                                           `json:"premId"`
+	PremId            float64                                         `json:"premId"`
 	SceneDesc         string                                          `json:"sceneDesc"`
 	ShortName         string                                          `json:"shortName"`
 	Thumbnail         string                                          `json:"thumbnail"`
@@ -4084,7 +4084,7 @@ type RestGarageTireinfoResponseFrontLeft struct {
 	CenterTemperature float64 `json:"centerTemperature"`
 	LeftTemperature   float64 `json:"leftTemperature"`
 	Load              float64 `json:"load"`
-	Pressure          int64   `json:"pressure"`
+	Pressure          float64 `json:"pressure"`
 	RightTemperature  float64 `json:"rightTemperature"`
 }
 
@@ -4092,7 +4092,7 @@ type RestGarageTireinfoResponseFrontRight struct {
 	CenterTemperature float64 `json:"centerTemperature"`
 	LeftTemperature   float64 `json:"leftTemperature"`
 	Load              float64 `json:"load"`
-	Pressure          int64   `json:"pressure"`
+	Pressure          float64 `json:"pressure"`
 	RightTemperature  float64 `json:"rightTemperature"`
 }
 
@@ -4100,7 +4100,7 @@ type RestGarageTireinfoResponseRearLeft struct {
 	CenterTemperature float64 `json:"centerTemperature"`
 	LeftTemperature   float64 `json:"leftTemperature"`
 	Load              float64 `json:"load"`
-	Pressure          int64   `json:"pressure"`
+	Pressure          float64 `json:"pressure"`
 	RightTemperature  float64 `json:"rightTemperature"`
 }
 
@@ -4108,7 +4108,7 @@ type RestGarageTireinfoResponseRearRight struct {
 	CenterTemperature float64 `json:"centerTemperature"`
 	LeftTemperature   float64 `json:"leftTemperature"`
 	Load              float64 `json:"load"`
-	Pressure          int64   `json:"pressure"`
+	Pressure          float64 `json:"pressure"`
 	RightTemperature  float64 `json:"rightTemperature"`
 }
 
@@ -4311,2247 +4311,2247 @@ type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValues struct {
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesGearGraph struct {
-	KiloRPM         []int64 `json:"kiloRPM"`
-	NumForwardGears int64   `json:"numForwardGears"`
-	TopSpeed        []int64 `json:"topSpeed"`
-	Unit            string  `json:"unit"`
+	KiloRPM         []float64 `json:"kiloRPM"`
+	NumForwardGears float64   `json:"numForwardGears"`
+	TopSpeed        []float64 `json:"topSpeed"`
+	Unit            string    `json:"unit"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMANTILOCKBRAKES struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMANTILOCKBRAKESYSTEMMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMBRAKEBALANCE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMBRAKEDUCTS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMBRAKEDUCTSREAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMBRAKEMIGRATION struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ00 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ01 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ02 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ03 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ04 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ05 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ06 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ07 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ08 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ09 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ10 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMCHASSISADJ11 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMDIFFCOAST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMDIFFPOWER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMDIFFPRELOAD struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMDIFFPUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMELECTRICMOTORMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMENGINEBOOST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMENGINEBRAKEMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMENGINEMIXTURE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDFASTBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDFASTREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDPACKERS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDSLOWBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDSLOWREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDTENDERSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONT3RDTENDERSPRINGTRAVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTANTISWAY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTDIFFCOAST struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTDIFFPOWER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTDIFFPRELOAD struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTDIFFPUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTTIRECOMPOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTTOEIN struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTTOEOFFSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTWHEELTRACK struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFRONTWING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFUELCAPACITY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMFUELLEVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR4 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR5 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR6 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR7 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR8 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEAR9 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARAUTODOWNSHIFT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARAUTOUPSHIFT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARFINAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARREVERSE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM4 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM5 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM6 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM7 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMGEARUPSHIFTRPM8 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMHANDBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMHANDFRONTBRAKEPRESSURE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMLEFTCASTER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMLEFTFENDERFLARE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMLEFTTRACKBAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMNUMPITSTOPS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMOILRADIATOR struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMPITSTOP1 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMPITSTOP2 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMPITSTOP3 struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMRATIOSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDFASTBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDFASTREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDPACKERS struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDSLOWBUMP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDSLOWREBOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDTENDERSPRING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREAR3RDTENDERSPRINGTRAVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARANTISWAY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARTIRECOMPOUND struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARTOEIN struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARTOEOFFSET struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARWHEELTRACK struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREARWING struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREGENLEVEL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMREVLIMITER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMRIGHTCASTER struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMRIGHTFENDERFLARE struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMRIGHTTRACKBAR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMSTEERLOCK struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMTORQUESPLIT struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMTRACTIONCONTROL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMTRACTIONCONTROLMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMTRACTIONCONTROLPOWERCUTMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMTRACTIONCONTROLSLIPANGLEMAP struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMVIRTUALENERGY struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMWATERRADIATOR struct {
-	Available            bool   `json:"available"`
-	Caption              string `json:"caption"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	Caption              string  `json:"caption"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMWEIGHTDISTRIB struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMWEIGHTLATERAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMWEIGHTVERTICAL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesVMWEIGHTWEDGE struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEDISCWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEDISCWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEDISCWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEDISCWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEPADWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEPADWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEPADWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMBRAKEPADWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCAMBERWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCAMBERWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCAMBERWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCAMBERWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCOMPOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCOMPOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCOMPOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMCOMPOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTBUMPWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTBUMPWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTBUMPWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTBUMPWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTREBOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTREBOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTREBOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMFASTREBOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPACKERSWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPACKERSWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPACKERSWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPACKERSWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPRESSUREWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPRESSUREWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPRESSUREWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMPRESSUREWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMRIDEHEIGHTWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMRIDEHEIGHTWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMRIDEHEIGHTWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMRIDEHEIGHTWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWBUMPWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWBUMPWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWBUMPWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWBUMPWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWREBOUNDWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWREBOUNDWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWREBOUNDWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSLOWREBOUNDWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSPRINGWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSPRINGWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSPRINGWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSPRINGWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSRUBBERWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSRUBBERWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSRUBBERWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMSRUBBERWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGTRAVELWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGTRAVELWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGTRAVELWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGTRAVELWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGWFL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGWFR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGWRL struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCarSetupGarageValuesWMTENDERSPRINGWRR struct {
-	Available            bool   `json:"available"`
-	DiffComparisonValue  int64  `json:"diffComparisonValue"`
-	IsFreeSetting        bool   `json:"isFreeSetting"`
-	Key                  string `json:"key"`
-	LastSavedStringValue string `json:"lastSavedStringValue"`
-	MaxValue             int64  `json:"maxValue"`
-	MinValue             int64  `json:"minValue"`
-	NumChangesValue      int64  `json:"numChangesValue"`
-	StringValue          string `json:"stringValue"`
-	Value                int64  `json:"value"`
+	Available            bool    `json:"available"`
+	DiffComparisonValue  float64 `json:"diffComparisonValue"`
+	IsFreeSetting        bool    `json:"isFreeSetting"`
+	Key                  string  `json:"key"`
+	LastSavedStringValue string  `json:"lastSavedStringValue"`
+	MaxValue             float64 `json:"maxValue"`
+	MinValue             float64 `json:"minValue"`
+	NumChangesValue      float64 `json:"numChangesValue"`
+	StringValue          string  `json:"stringValue"`
+	Value                float64 `json:"value"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseCurrentWeather struct {
-	AirPressure       int64   `json:"airPressure"`
+	AirPressure       float64 `json:"airPressure"`
 	AmbientTempKelvin float64 `json:"ambientTempKelvin"`
 	CloudCoverage     float64 `json:"cloudCoverage"`
 	Humidity          float64 `json:"humidity"`
 	LightLevel        float64 `json:"lightLevel"`
-	RainIntensity     int64   `json:"rainIntensity"`
-	Raining           int64   `json:"raining"`
+	RainIntensity     float64 `json:"rainIntensity"`
+	Raining           float64 `json:"raining"`
 	TrackTempKelvin   float64 `json:"trackTempKelvin"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseRacePosition struct {
-	GapToFirstInClassLaps int64 `json:"gapToFirstInClassLaps"`
-	GapToFirstInClassTime int64 `json:"gapToFirstInClassTime"`
-	GapToLastInClassLaps  int64 `json:"gapToLastInClassLaps"`
-	GapToLastInClassTime  int64 `json:"gapToLastInClassTime"`
-	PlaceInClass          int64 `json:"placeInClass"`
-	PlaceOverall          int64 `json:"placeOverall"`
+	GapToFirstInClassLaps float64 `json:"gapToFirstInClassLaps"`
+	GapToFirstInClassTime float64 `json:"gapToFirstInClassTime"`
+	GapToLastInClassLaps  float64 `json:"gapToLastInClassLaps"`
+	GapToLastInClassTime  float64 `json:"gapToLastInClassTime"`
+	PlaceInClass          float64 `json:"placeInClass"`
+	PlaceOverall          float64 `json:"placeOverall"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseSessionTime struct {
@@ -6559,9 +6559,9 @@ type RestGarageUIScreenCarSetupOverviewResponseSessionTime struct {
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseTeamInfo struct {
-	DriverNames [][]int64 `json:"driverNames"`
-	TeamName    string    `json:"teamName"`
-	VehicleName string    `json:"vehicleName"`
+	DriverNames [][]float64 `json:"driverNames"`
+	TeamName    string      `json:"teamName"`
+	VehicleName string      `json:"vehicleName"`
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseWeatherForecast struct {
@@ -6569,14 +6569,14 @@ type RestGarageUIScreenCarSetupOverviewResponseWeatherForecast struct {
 }
 
 type RestGarageUIScreenCarSetupOverviewResponseWeatherForecastNodes struct {
-	Duration      []int64 `json:"Duration"`
-	Humidity      []int64 `json:"Humidity"`
-	RainChance    []int64 `json:"RainChance"`
-	Sky           []int64 `json:"Sky"`
-	StartTime     []int64 `json:"StartTime"`
-	Temperature   []int64 `json:"Temperature"`
-	WindDirection []int64 `json:"WindDirection"`
-	WindSpeed     []int64 `json:"WindSpeed"`
+	Duration      []float64 `json:"Duration"`
+	Humidity      []float64 `json:"Humidity"`
+	RainChance    []float64 `json:"RainChance"`
+	Sky           []float64 `json:"Sky"`
+	StartTime     []float64 `json:"StartTime"`
+	Temperature   []float64 `json:"Temperature"`
+	WindDirection []float64 `json:"WindDirection"`
+	WindSpeed     []float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponse struct {
@@ -6594,23 +6594,23 @@ type RestGarageUIScreenRepairAndRefuelResponse struct {
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseCurrentWeather struct {
-	AirPressure       int64   `json:"airPressure"`
+	AirPressure       float64 `json:"airPressure"`
 	AmbientTempKelvin float64 `json:"ambientTempKelvin"`
 	CloudCoverage     float64 `json:"cloudCoverage"`
 	Humidity          float64 `json:"humidity"`
 	LightLevel        float64 `json:"lightLevel"`
-	RainIntensity     int64   `json:"rainIntensity"`
-	Raining           int64   `json:"raining"`
+	RainIntensity     float64 `json:"rainIntensity"`
+	Raining           float64 `json:"raining"`
 	TrackTempKelvin   float64 `json:"trackTempKelvin"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseFuelInfo struct {
-	CurrentBattery       int64 `json:"currentBattery"`
-	CurrentFuel          int64 `json:"currentFuel"`
-	CurrentVirtualEnergy int64 `json:"currentVirtualEnergy"`
-	MaxBattery           int64 `json:"maxBattery"`
-	MaxFuel              int64 `json:"maxFuel"`
-	MaxVirtualEnergy     int64 `json:"maxVirtualEnergy"`
+	CurrentBattery       float64 `json:"currentBattery"`
+	CurrentFuel          float64 `json:"currentFuel"`
+	CurrentVirtualEnergy float64 `json:"currentVirtualEnergy"`
+	MaxBattery           float64 `json:"maxBattery"`
+	MaxFuel              float64 `json:"maxFuel"`
+	MaxVirtualEnergy     float64 `json:"maxVirtualEnergy"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitMenu struct {
@@ -6618,9 +6618,9 @@ type RestGarageUIScreenRepairAndRefuelResponsePitMenu struct {
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitMenuPitMenuItem struct {
-	PMCValue       int64                                                                     `json:"PMC Value"`
-	CurrentSetting int64                                                                     `json:"currentSetting"`
-	Default        int64                                                                     `json:"default"`
+	PMCValue       float64                                                                   `json:"PMC Value"`
+	CurrentSetting float64                                                                   `json:"currentSetting"`
+	Default        float64                                                                   `json:"default"`
 	Name           string                                                                    `json:"name"`
 	Settings       []RestGarageUIScreenRepairAndRefuelResponsePitMenuPitMenuItemSettingsItem `json:"settings"`
 }
@@ -6630,17 +6630,17 @@ type RestGarageUIScreenRepairAndRefuelResponsePitMenuPitMenuItemSettingsItem str
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitRecommendations struct {
-	FLTIRE        int64 `json:"FL TIRE:"`
-	FRTIRE        int64 `json:"FR TIRE:"`
-	RLTIRE        int64 `json:"RL TIRE:"`
-	RRTIRE        int64 `json:"RR TIRE:"`
-	TIRES         int64 `json:"TIRES:"`
-	Fuel          int64 `json:"fuel"`
-	VirtualEnergy int64 `json:"virtualEnergy"`
+	FLTIRE        float64 `json:"FL TIRE:"`
+	FRTIRE        float64 `json:"FR TIRE:"`
+	RLTIRE        float64 `json:"RL TIRE:"`
+	RRTIRE        float64 `json:"RR TIRE:"`
+	TIRES         float64 `json:"TIRES:"`
+	Fuel          float64 `json:"fuel"`
+	VirtualEnergy float64 `json:"virtualEnergy"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitStopLength struct {
-	TimeInSeconds int64 `json:"timeInSeconds"`
+	TimeInSeconds float64 `json:"timeInSeconds"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitStopTimes struct {
@@ -6648,52 +6648,52 @@ type RestGarageUIScreenRepairAndRefuelResponsePitStopTimes struct {
 }
 
 type RestGarageUIScreenRepairAndRefuelResponsePitStopTimesTimes struct {
-	BrakeChange                 int64   `json:"BrakeChange"`
-	BrakeTimeConcurrent         int64   `json:"BrakeTimeConcurrent"`
-	DriverChange                int64   `json:"DriverChange"`
-	DriverConcurrent            int64   `json:"DriverConcurrent"`
-	DriverDamage                int64   `json:"DriverDamage"`
-	DriverRandom                int64   `json:"DriverRandom"`
-	FenderFlareAdjust           int64   `json:"FenderFlareAdjust"`
-	FixAeroDamage               int64   `json:"FixAeroDamage"`
-	FixAllDamage                int64   `json:"FixAllDamage"`
-	FixRandomDelay              int64   `json:"FixRandomDelay"`
-	FixTimeConcurrent           int64   `json:"FixTimeConcurrent"`
-	FourTireChange              int64   `json:"FourTireChange"`
-	FrontWingAdjust             int64   `json:"FrontWingAdjust"`
-	FrontWingReplace            int64   `json:"FrontWingReplace"`
+	BrakeChange                 float64 `json:"BrakeChange"`
+	BrakeTimeConcurrent         float64 `json:"BrakeTimeConcurrent"`
+	DriverChange                float64 `json:"DriverChange"`
+	DriverConcurrent            float64 `json:"DriverConcurrent"`
+	DriverDamage                float64 `json:"DriverDamage"`
+	DriverRandom                float64 `json:"DriverRandom"`
+	FenderFlareAdjust           float64 `json:"FenderFlareAdjust"`
+	FixAeroDamage               float64 `json:"FixAeroDamage"`
+	FixAllDamage                float64 `json:"FixAllDamage"`
+	FixRandomDelay              float64 `json:"FixRandomDelay"`
+	FixTimeConcurrent           float64 `json:"FixTimeConcurrent"`
+	FourTireChange              float64 `json:"FourTireChange"`
+	FrontWingAdjust             float64 `json:"FrontWingAdjust"`
+	FrontWingReplace            float64 `json:"FrontWingReplace"`
 	FuelFillRate                float64 `json:"FuelFillRate"`
-	FuelInsert                  int64   `json:"FuelInsert"`
-	FuelRandomDelay             int64   `json:"FuelRandomDelay"`
-	FuelRemove                  int64   `json:"FuelRemove"`
-	FuelTimeConcurrent          int64   `json:"FuelTimeConcurrent"`
+	FuelInsert                  float64 `json:"FuelInsert"`
+	FuelRandomDelay             float64 `json:"FuelRandomDelay"`
+	FuelRemove                  float64 `json:"FuelRemove"`
+	FuelTimeConcurrent          float64 `json:"FuelTimeConcurrent"`
 	OnTheFlyPressure            bool    `json:"OnTheFlyPressure"`
-	PressureChange              int64   `json:"PressureChange"`
-	RadiatorChange              int64   `json:"RadiatorChange"`
-	RandomBrakeDelay            int64   `json:"RandomBrakeDelay"`
-	RandomTireDelay             int64   `json:"RandomTireDelay"`
-	RearWingAdjust              int64   `json:"RearWingAdjust"`
-	RearWingReplace             int64   `json:"RearWingReplace"`
+	PressureChange              float64 `json:"PressureChange"`
+	RadiatorChange              float64 `json:"RadiatorChange"`
+	RandomBrakeDelay            float64 `json:"RandomBrakeDelay"`
+	RandomTireDelay             float64 `json:"RandomTireDelay"`
+	RearWingAdjust              float64 `json:"RearWingAdjust"`
+	RearWingReplace             float64 `json:"RearWingReplace"`
 	SimultaneousStopGo          bool    `json:"SimultaneousStopGo"`
-	SpringRubberChange          int64   `json:"SpringRubberChange"`
-	TireTimeConcurrent          int64   `json:"TireTimeConcurrent"`
-	TrackBarChange              int64   `json:"TrackBarChange"`
+	SpringRubberChange          float64 `json:"SpringRubberChange"`
+	TireTimeConcurrent          float64 `json:"TireTimeConcurrent"`
+	TrackBarChange              float64 `json:"TrackBarChange"`
 	TwoTireChange               float64 `json:"TwoTireChange"`
-	WedgeChange                 int64   `json:"WedgeChange"`
+	WedgeChange                 float64 `json:"WedgeChange"`
 	VirtualEnergyFillRate       float64 `json:"virtualEnergyFillRate"`
-	VirtualEnergyInsert         int64   `json:"virtualEnergyInsert"`
-	VirtualEnergyRandomDelay    int64   `json:"virtualEnergyRandomDelay"`
-	VirtualEnergyRemove         int64   `json:"virtualEnergyRemove"`
-	VirtualEnergyTimeConcurrent int64   `json:"virtualEnergyTimeConcurrent"`
+	VirtualEnergyInsert         float64 `json:"virtualEnergyInsert"`
+	VirtualEnergyRandomDelay    float64 `json:"virtualEnergyRandomDelay"`
+	VirtualEnergyRemove         float64 `json:"virtualEnergyRemove"`
+	VirtualEnergyTimeConcurrent float64 `json:"virtualEnergyTimeConcurrent"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseRacePosition struct {
-	GapToFirstInClassLaps int64 `json:"gapToFirstInClassLaps"`
-	GapToFirstInClassTime int64 `json:"gapToFirstInClassTime"`
-	GapToLastInClassLaps  int64 `json:"gapToLastInClassLaps"`
-	GapToLastInClassTime  int64 `json:"gapToLastInClassTime"`
-	PlaceInClass          int64 `json:"placeInClass"`
-	PlaceOverall          int64 `json:"placeOverall"`
+	GapToFirstInClassLaps float64 `json:"gapToFirstInClassLaps"`
+	GapToFirstInClassTime float64 `json:"gapToFirstInClassTime"`
+	GapToLastInClassLaps  float64 `json:"gapToLastInClassLaps"`
+	GapToLastInClassTime  float64 `json:"gapToLastInClassTime"`
+	PlaceInClass          float64 `json:"placeInClass"`
+	PlaceOverall          float64 `json:"placeOverall"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseSessionTime struct {
@@ -6701,21 +6701,21 @@ type RestGarageUIScreenRepairAndRefuelResponseSessionTime struct {
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseTeamInfo struct {
-	DriverNames [][]int64 `json:"driverNames"`
-	TeamName    string    `json:"teamName"`
-	VehicleName string    `json:"vehicleName"`
+	DriverNames [][]float64 `json:"driverNames"`
+	TeamName    string      `json:"teamName"`
+	VehicleName string      `json:"vehicleName"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseWearables struct {
 	Body       RestGarageUIScreenRepairAndRefuelResponseWearablesBody `json:"body"`
 	Brakes     []float64                                              `json:"brakes"`
-	Suspension []int64                                                `json:"suspension"`
-	Tires      []int64                                                `json:"tires"`
+	Suspension []float64                                              `json:"suspension"`
+	Tires      []float64                                              `json:"tires"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseWearablesBody struct {
-	Aero            int64  `json:"aero"`
-	DetachableParts []bool `json:"detachableParts"`
+	Aero            float64 `json:"aero"`
+	DetachableParts []bool  `json:"detachableParts"`
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseWeatherForecast struct {
@@ -6723,14 +6723,14 @@ type RestGarageUIScreenRepairAndRefuelResponseWeatherForecast struct {
 }
 
 type RestGarageUIScreenRepairAndRefuelResponseWeatherForecastNodes struct {
-	Duration      []int64 `json:"Duration"`
-	Humidity      []int64 `json:"Humidity"`
-	RainChance    []int64 `json:"RainChance"`
-	Sky           []int64 `json:"Sky"`
-	StartTime     []int64 `json:"StartTime"`
-	Temperature   []int64 `json:"Temperature"`
-	WindDirection []int64 `json:"WindDirection"`
-	WindSpeed     []int64 `json:"WindSpeed"`
+	Duration      []float64 `json:"Duration"`
+	Humidity      []float64 `json:"Humidity"`
+	RainChance    []float64 `json:"RainChance"`
+	Sky           []float64 `json:"Sky"`
+	StartTime     []float64 `json:"StartTime"`
+	Temperature   []float64 `json:"Temperature"`
+	WindDirection []float64 `json:"WindDirection"`
+	WindSpeed     []float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenSessionSetupResponse struct {
@@ -6744,7 +6744,7 @@ type RestGarageUIScreenSessionSetupResponseSelectedCar struct {
 	Classes          []string                                                       `json:"classes"`
 	ClassesOverride  string                                                         `json:"classesOverride"`
 	Desc             string                                                         `json:"desc"`
-	DlcAppID         int64                                                          `json:"dlcAppID"`
+	DlcAppID         float64                                                        `json:"dlcAppID"`
 	Drivers          []RestGarageUIScreenSessionSetupResponseSelectedCarDriversItem `json:"drivers"`
 	Engine           string                                                         `json:"engine"`
 	FullPathTree     string                                                         `json:"fullPathTree"`
@@ -6754,7 +6754,7 @@ type RestGarageUIScreenSessionSetupResponseSelectedCar struct {
 	LiveryName       string                                                         `json:"liveryName"`
 	Manufacturer     string                                                         `json:"manufacturer"`
 	Number           string                                                         `json:"number"`
-	PremID           int64                                                          `json:"premID"`
+	PremID           float64                                                        `json:"premID"`
 	PrimaryVehFile   bool                                                           `json:"primaryVehFile"`
 	Sig              string                                                         `json:"sig"`
 	Team             string                                                         `json:"team"`
@@ -6774,15 +6774,15 @@ type RestGarageUIScreenSessionSetupResponseTrackInfo struct {
 	CmpName                  string                                                                      `json:"cmpName"`
 	Corners                  string                                                                      `json:"corners"`
 	CountryCode              string                                                                      `json:"countryCode"`
-	DefaultPracticeStartTime int64                                                                       `json:"defaultPracticeStartTime"`
+	DefaultPracticeStartTime float64                                                                     `json:"defaultPracticeStartTime"`
 	DefaultPracticeWeather   []RestGarageUIScreenSessionSetupResponseTrackInfoDefaultPracticeWeatherItem `json:"defaultPracticeWeather"`
-	DefaultQualifyStartTime  int64                                                                       `json:"defaultQualifyStartTime"`
+	DefaultQualifyStartTime  float64                                                                     `json:"defaultQualifyStartTime"`
 	DefaultQualifyWeather    []RestGarageUIScreenSessionSetupResponseTrackInfoDefaultQualifyWeatherItem  `json:"defaultQualifyWeather"`
-	DefaultRaceLengthLaps    int64                                                                       `json:"defaultRaceLengthLaps"`
-	DefaultRaceLengthTime    int64                                                                       `json:"defaultRaceLengthTime"`
-	DefaultRaceStartTime     int64                                                                       `json:"defaultRaceStartTime"`
+	DefaultRaceLengthLaps    float64                                                                     `json:"defaultRaceLengthLaps"`
+	DefaultRaceLengthTime    float64                                                                     `json:"defaultRaceLengthTime"`
+	DefaultRaceStartTime     float64                                                                     `json:"defaultRaceStartTime"`
 	DefaultRaceWeather       []RestGarageUIScreenSessionSetupResponseTrackInfoDefaultRaceWeatherItem     `json:"defaultRaceWeather"`
-	DlcAppID                 int64                                                                       `json:"dlcAppID"`
+	DlcAppID                 float64                                                                     `json:"dlcAppID"`
 	EventName                string                                                                      `json:"eventName"`
 	GrandPrixName            string                                                                      `json:"grandPrixName"`
 	Id                       string                                                                      `json:"id"`
@@ -6791,7 +6791,7 @@ type RestGarageUIScreenSessionSetupResponseTrackInfo struct {
 	Location                 string                                                                      `json:"location"`
 	OfficialEvent            bool                                                                        `json:"officialEvent"`
 	OpeningYear              string                                                                      `json:"openingYear"`
-	PremId                   int64                                                                       `json:"premId"`
+	PremId                   float64                                                                     `json:"premId"`
 	ProperTrackName          string                                                                      `json:"properTrackName"`
 	SceneDesc                string                                                                      `json:"sceneDesc"`
 	SceneSig                 string                                                                      `json:"sceneSig"`
@@ -6803,36 +6803,36 @@ type RestGarageUIScreenSessionSetupResponseTrackInfo struct {
 }
 
 type RestGarageUIScreenSessionSetupResponseTrackInfoDefaultPracticeWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenSessionSetupResponseTrackInfoDefaultQualifyWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenSessionSetupResponseTrackInfoDefaultRaceWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenTireManagementResponse struct {
@@ -6851,13 +6851,13 @@ type RestGarageUIScreenTireManagementResponse struct {
 }
 
 type RestGarageUIScreenTireManagementResponseCurrentWeather struct {
-	AirPressure       int64   `json:"airPressure"`
+	AirPressure       float64 `json:"airPressure"`
 	AmbientTempKelvin float64 `json:"ambientTempKelvin"`
 	CloudCoverage     float64 `json:"cloudCoverage"`
 	Humidity          float64 `json:"humidity"`
 	LightLevel        float64 `json:"lightLevel"`
-	RainIntensity     int64   `json:"rainIntensity"`
-	Raining           int64   `json:"raining"`
+	RainIntensity     float64 `json:"rainIntensity"`
+	Raining           float64 `json:"raining"`
 	TrackTempKelvin   float64 `json:"trackTempKelvin"`
 }
 
@@ -6865,7 +6865,7 @@ type RestGarageUIScreenTireManagementResponseExpectedUsage struct {
 	CompoundsWearPerLap         []RestGarageUIScreenTireManagementResponseExpectedUsageCompoundsWearPerLapItem `json:"compoundsWearPerLap"`
 	FuelConsumption             float64                                                                        `json:"fuelConsumption"`
 	FuelFractionPerLap          float64                                                                        `json:"fuelFractionPerLap"`
-	VirtualEnergyConsumption    int64                                                                          `json:"virtualEnergyConsumption"`
+	VirtualEnergyConsumption    float64                                                                        `json:"virtualEnergyConsumption"`
 	VirtualEnergyFractionPerLap float64                                                                        `json:"virtualEnergyFractionPerLap"`
 }
 
@@ -6879,8 +6879,8 @@ type RestGarageUIScreenTireManagementResponseOptimalCompoundConditions struct {
 }
 
 type RestGarageUIScreenTireManagementResponseOptimalCompoundConditionsCompoundsItem struct {
-	OptimalTemperature int64  `json:"optimalTemperature"`
-	Type               string `json:"type"`
+	OptimalTemperature float64 `json:"optimalTemperature"`
+	Type               string  `json:"type"`
 }
 
 type RestGarageUIScreenTireManagementResponsePitMenu struct {
@@ -6888,9 +6888,9 @@ type RestGarageUIScreenTireManagementResponsePitMenu struct {
 }
 
 type RestGarageUIScreenTireManagementResponsePitMenuPitMenuItem struct {
-	PMCValue       int64                                                                    `json:"PMC Value"`
-	CurrentSetting int64                                                                    `json:"currentSetting"`
-	Default        int64                                                                    `json:"default"`
+	PMCValue       float64                                                                  `json:"PMC Value"`
+	CurrentSetting float64                                                                  `json:"currentSetting"`
+	Default        float64                                                                  `json:"default"`
 	Name           string                                                                   `json:"name"`
 	Settings       []RestGarageUIScreenTireManagementResponsePitMenuPitMenuItemSettingsItem `json:"settings"`
 }
@@ -6900,12 +6900,12 @@ type RestGarageUIScreenTireManagementResponsePitMenuPitMenuItemSettingsItem stru
 }
 
 type RestGarageUIScreenTireManagementResponseRacePosition struct {
-	GapToFirstInClassLaps int64 `json:"gapToFirstInClassLaps"`
-	GapToFirstInClassTime int64 `json:"gapToFirstInClassTime"`
-	GapToLastInClassLaps  int64 `json:"gapToLastInClassLaps"`
-	GapToLastInClassTime  int64 `json:"gapToLastInClassTime"`
-	PlaceInClass          int64 `json:"placeInClass"`
-	PlaceOverall          int64 `json:"placeOverall"`
+	GapToFirstInClassLaps float64 `json:"gapToFirstInClassLaps"`
+	GapToFirstInClassTime float64 `json:"gapToFirstInClassTime"`
+	GapToLastInClassLaps  float64 `json:"gapToLastInClassLaps"`
+	GapToLastInClassTime  float64 `json:"gapToLastInClassTime"`
+	PlaceInClass          float64 `json:"placeInClass"`
+	PlaceOverall          float64 `json:"placeOverall"`
 }
 
 type RestGarageUIScreenTireManagementResponseSessionTime struct {
@@ -6913,49 +6913,49 @@ type RestGarageUIScreenTireManagementResponseSessionTime struct {
 }
 
 type RestGarageUIScreenTireManagementResponseTeamInfo struct {
-	DriverNames [][]int64 `json:"driverNames"`
-	TeamName    string    `json:"teamName"`
-	VehicleName string    `json:"vehicleName"`
+	DriverNames [][]float64 `json:"driverNames"`
+	TeamName    string      `json:"teamName"`
+	VehicleName string      `json:"vehicleName"`
 }
 
 type RestGarageUIScreenTireManagementResponseTireInvGarageOptions struct {
-	NewTiresRemaining int64                                                                               `json:"newTiresRemaining"`
+	NewTiresRemaining float64                                                                             `json:"newTiresRemaining"`
 	SelectedTires     []RestGarageUIScreenTireManagementResponseTireInvGarageOptionsSelectedTiresItem     `json:"selectedTires"`
 	TireOptions       [][]RestGarageUIScreenTireManagementResponseTireInvGarageOptionsTireOptionsItemItem `json:"tireOptions"`
 }
 
 type RestGarageUIScreenTireManagementResponseTireInvGarageOptionsSelectedTiresItem struct {
-	CompoundIndex int64 `json:"compoundIndex"`
-	Index         int64 `json:"index"`
-	IsUsed        bool  `json:"isUsed"`
-	Type          int64 `json:"type"`
-	WearValue     int64 `json:"wearValue"`
+	CompoundIndex float64 `json:"compoundIndex"`
+	Index         float64 `json:"index"`
+	IsUsed        bool    `json:"isUsed"`
+	Type          float64 `json:"type"`
+	WearValue     float64 `json:"wearValue"`
 }
 
 type RestGarageUIScreenTireManagementResponseTireInvGarageOptionsTireOptionsItemItem struct {
-	CompoundIndex int64 `json:"compoundIndex"`
-	Index         int64 `json:"index"`
-	IsUsed        bool  `json:"isUsed"`
-	Type          int64 `json:"type"`
-	WearValue     int64 `json:"wearValue"`
+	CompoundIndex float64 `json:"compoundIndex"`
+	Index         float64 `json:"index"`
+	IsUsed        bool    `json:"isUsed"`
+	Type          float64 `json:"type"`
+	WearValue     float64 `json:"wearValue"`
 }
 
 type RestGarageUIScreenTireManagementResponseTireInventory struct {
-	BestConditionsUsed [][]int64 `json:"bestConditionsUsed"`
-	MaxAvailableTires  int64     `json:"maxAvailableTires"`
-	NewTires           int64     `json:"newTires"`
+	BestConditionsUsed [][]float64 `json:"bestConditionsUsed"`
+	MaxAvailableTires  float64     `json:"maxAvailableTires"`
+	NewTires           float64     `json:"newTires"`
 }
 
 type RestGarageUIScreenTireManagementResponseWearables struct {
 	Body       RestGarageUIScreenTireManagementResponseWearablesBody `json:"body"`
 	Brakes     []float64                                             `json:"brakes"`
-	Suspension []int64                                               `json:"suspension"`
-	Tires      []int64                                               `json:"tires"`
+	Suspension []float64                                             `json:"suspension"`
+	Tires      []float64                                             `json:"tires"`
 }
 
 type RestGarageUIScreenTireManagementResponseWearablesBody struct {
-	Aero            int64  `json:"aero"`
-	DetachableParts []bool `json:"detachableParts"`
+	Aero            float64 `json:"aero"`
+	DetachableParts []bool  `json:"detachableParts"`
 }
 
 type RestGarageUIScreenTireManagementResponseWeatherForecast struct {
@@ -6963,14 +6963,14 @@ type RestGarageUIScreenTireManagementResponseWeatherForecast struct {
 }
 
 type RestGarageUIScreenTireManagementResponseWeatherForecastNodes struct {
-	Duration      []int64 `json:"Duration"`
-	Humidity      []int64 `json:"Humidity"`
-	RainChance    []int64 `json:"RainChance"`
-	Sky           []int64 `json:"Sky"`
-	StartTime     []int64 `json:"StartTime"`
-	Temperature   []int64 `json:"Temperature"`
-	WindDirection []int64 `json:"WindDirection"`
-	WindSpeed     []int64 `json:"WindSpeed"`
+	Duration      []float64 `json:"Duration"`
+	Humidity      []float64 `json:"Humidity"`
+	RainChance    []float64 `json:"RainChance"`
+	Sky           []float64 `json:"Sky"`
+	StartTime     []float64 `json:"StartTime"`
+	Temperature   []float64 `json:"Temperature"`
+	WindDirection []float64 `json:"WindDirection"`
+	WindSpeed     []float64 `json:"WindSpeed"`
 }
 
 type RestGarageUIScreenTireManagementResponseWheelInfo struct {
@@ -6979,8 +6979,8 @@ type RestGarageUIScreenTireManagementResponseWheelInfo struct {
 
 type RestGarageUIScreenTireManagementResponseWheelInfoWheelLocsItem struct {
 	BrakeTemp    float64 `json:"brakeTemp"`
-	Compound     int64   `json:"compound"`
-	TirePressure int64   `json:"tirePressure"`
+	Compound     float64 `json:"compound"`
+	TirePressure float64 `json:"tirePressure"`
 	TireTemp     float64 `json:"tireTemp"`
 }
 
@@ -6999,7 +6999,7 @@ type RestMaterialeditorLiveryeditorGetCustomSkinInfoResponse struct {
 
 type RestOptionsAssignChangestatusResponse struct {
 	Info   interface{} `json:"Info"`
-	Status int64       `json:"Status"`
+	Status float64     `json:"Status"`
 }
 
 type RestOptionsCommandlineResponse struct {
@@ -7036,243 +7036,243 @@ type RestOptionsDisplayResponse struct {
 }
 
 type RestOptionsDisplayResponseGAMEOPTEnablePlugins struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGAMEOPTKph struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGAMEOPTTransparentTrainerLap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGAMEOPTTransparentTrainerLeadTime struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGAMEOPTUnits struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTDriverOverlayHud struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTEnvReflections struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTOpponentDetail struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTPlayerDetail struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTRainDrops struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTRearview struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTRoadReflections struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTShadowBlur struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTShadows struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTSoftParticles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTSpecialfx struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTStabilizeHorizon struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTStartingView struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTSteeringWheel struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTTexture struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTTextureFilter struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTTextureStreaming struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTTrack struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTVfov struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseGRAPHOPTVisibleVehicles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsDisplayResponseMULTIDownloadCustomSkins struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsGetAllResolutionsResponseItem struct {
-	Height      int64   `json:"Height"`
-	RefreshRate []int64 `json:"RefreshRate"`
-	Width       int64   `json:"Width"`
+	Height      float64   `json:"Height"`
+	RefreshRate []float64 `json:"RefreshRate"`
+	Width       float64   `json:"Width"`
 }
 
 type RestOptionsGetLanguageResponse struct {
@@ -7306,54 +7306,54 @@ type RestOptionsLiveInputsResponseLiveInputsDiItemMinmax struct {
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxBrakes struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxClutch struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxHandbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxHandfrontbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxSteerLeft struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxSteerRight struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemMinmaxThrottle struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsDiItemRawInputs struct {
-	Brakes            int64 `json:"brakes"`
-	Clutch            int64 `json:"clutch"`
-	DirectManualShift int64 `json:"directManualShift"`
-	Handbrake         int64 `json:"handbrake"`
-	Handfrontbrake    int64 `json:"handfrontbrake"`
-	LaunchControl     bool  `json:"launchControl"`
-	ShiftDown         bool  `json:"shiftDown"`
-	ShiftToNeutral    bool  `json:"shiftToNeutral"`
-	ShiftUp           bool  `json:"shiftUp"`
-	SteerLeft         int64 `json:"steerLeft"`
-	SteerRight        int64 `json:"steerRight"`
-	TcOverride        bool  `json:"tcOverride"`
-	Throttle          int64 `json:"throttle"`
+	Brakes            float64 `json:"brakes"`
+	Clutch            float64 `json:"clutch"`
+	DirectManualShift float64 `json:"directManualShift"`
+	Handbrake         float64 `json:"handbrake"`
+	Handfrontbrake    float64 `json:"handfrontbrake"`
+	LaunchControl     bool    `json:"launchControl"`
+	ShiftDown         bool    `json:"shiftDown"`
+	ShiftToNeutral    bool    `json:"shiftToNeutral"`
+	ShiftUp           bool    `json:"shiftUp"`
+	SteerLeft         float64 `json:"steerLeft"`
+	SteerRight        float64 `json:"steerRight"`
+	TcOverride        bool    `json:"tcOverride"`
+	Throttle          float64 `json:"throttle"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepad struct {
@@ -7372,23 +7372,23 @@ type RestOptionsLiveInputsResponseLiveInputsGamepadMinmax struct {
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxBrakes struct {
-	Max int64   `json:"max"`
+	Max float64 `json:"max"`
 	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxClutch struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxHandbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxHandfrontbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxSteerLeft struct {
@@ -7397,21 +7397,21 @@ type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxSteerLeft struct {
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxSteerRight struct {
-	Max int64   `json:"max"`
+	Max float64 `json:"max"`
 	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadMinmaxThrottle struct {
-	Max int64   `json:"max"`
+	Max float64 `json:"max"`
 	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsGamepadRawInputs struct {
-	Brakes            int64   `json:"brakes"`
-	Clutch            int64   `json:"clutch"`
-	DirectManualShift int64   `json:"directManualShift"`
-	Handbrake         int64   `json:"handbrake"`
-	Handfrontbrake    int64   `json:"handfrontbrake"`
+	Brakes            float64 `json:"brakes"`
+	Clutch            float64 `json:"clutch"`
+	DirectManualShift float64 `json:"directManualShift"`
+	Handbrake         float64 `json:"handbrake"`
+	Handfrontbrake    float64 `json:"handfrontbrake"`
 	LaunchControl     bool    `json:"launchControl"`
 	ShiftDown         bool    `json:"shiftDown"`
 	ShiftToNeutral    bool    `json:"shiftToNeutral"`
@@ -7419,7 +7419,7 @@ type RestOptionsLiveInputsResponseLiveInputsGamepadRawInputs struct {
 	SteerLeft         float64 `json:"steerLeft"`
 	SteerRight        float64 `json:"steerRight"`
 	TcOverride        bool    `json:"tcOverride"`
-	Throttle          int64   `json:"throttle"`
+	Throttle          float64 `json:"throttle"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboard struct {
@@ -7438,70 +7438,70 @@ type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmax struct {
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxBrakes struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxClutch struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxHandbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxHandfrontbrake struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxSteerLeft struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxSteerRight struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardMinmaxThrottle struct {
-	Max int64 `json:"max"`
-	Min int64 `json:"min"`
+	Max float64 `json:"max"`
+	Min float64 `json:"min"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsKeyboardRawInputs struct {
-	Brakes            int64 `json:"brakes"`
-	Clutch            int64 `json:"clutch"`
-	DirectManualShift int64 `json:"directManualShift"`
-	Handbrake         int64 `json:"handbrake"`
-	Handfrontbrake    int64 `json:"handfrontbrake"`
-	LaunchControl     bool  `json:"launchControl"`
-	ShiftDown         bool  `json:"shiftDown"`
-	ShiftToNeutral    bool  `json:"shiftToNeutral"`
-	ShiftUp           bool  `json:"shiftUp"`
-	SteerLeft         int64 `json:"steerLeft"`
-	SteerRight        int64 `json:"steerRight"`
-	TcOverride        bool  `json:"tcOverride"`
-	Throttle          int64 `json:"throttle"`
+	Brakes            float64 `json:"brakes"`
+	Clutch            float64 `json:"clutch"`
+	DirectManualShift float64 `json:"directManualShift"`
+	Handbrake         float64 `json:"handbrake"`
+	Handfrontbrake    float64 `json:"handfrontbrake"`
+	LaunchControl     bool    `json:"launchControl"`
+	ShiftDown         bool    `json:"shiftDown"`
+	ShiftToNeutral    bool    `json:"shiftToNeutral"`
+	ShiftUp           bool    `json:"shiftUp"`
+	SteerLeft         float64 `json:"steerLeft"`
+	SteerRight        float64 `json:"steerRight"`
+	TcOverride        bool    `json:"tcOverride"`
+	Throttle          float64 `json:"throttle"`
 }
 
 type RestOptionsLiveInputsResponseLiveInputsProcessedInputs struct {
-	Brakes            int64 `json:"brakes"`
-	Clutch            int64 `json:"clutch"`
-	DirectManualShift int64 `json:"directManualShift"`
-	Handbrake         int64 `json:"handbrake"`
-	Handfrontbrake    int64 `json:"handfrontbrake"`
-	LaunchControl     bool  `json:"launchControl"`
-	ShiftDown         bool  `json:"shiftDown"`
-	ShiftToNeutral    bool  `json:"shiftToNeutral"`
-	ShiftUp           bool  `json:"shiftUp"`
-	SteerLeft         int64 `json:"steerLeft"`
-	SteerRight        int64 `json:"steerRight"`
-	TcOverride        bool  `json:"tcOverride"`
-	Throttle          int64 `json:"throttle"`
+	Brakes            float64 `json:"brakes"`
+	Clutch            float64 `json:"clutch"`
+	DirectManualShift float64 `json:"directManualShift"`
+	Handbrake         float64 `json:"handbrake"`
+	Handfrontbrake    float64 `json:"handfrontbrake"`
+	LaunchControl     bool    `json:"launchControl"`
+	ShiftDown         bool    `json:"shiftDown"`
+	ShiftToNeutral    bool    `json:"shiftToNeutral"`
+	ShiftUp           bool    `json:"shiftUp"`
+	SteerLeft         float64 `json:"steerLeft"`
+	SteerRight        float64 `json:"steerRight"`
+	TcOverride        bool    `json:"tcOverride"`
+	Throttle          float64 `json:"throttle"`
 }
 
 type RestOptionsSettingsResponse struct {
@@ -7724,251 +7724,251 @@ type RestOptionsSettingsResponse struct {
 }
 
 type RestOptionsSettingsResponseCONTROLAutoReverse struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseCONTROLTrackIr struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDISPLAYOPTShowroom struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAntilockBrakes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutoBlip struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutoClutch struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutoHeadlights struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutoLift struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutoWipers struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutomaticPitSpeedLimit struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSAutopit struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSBrakeHelp struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSHoldBrakes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSHoldClutch struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSInvulnerable struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSOppositeLock struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSRepeatShifts struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSShiftMode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSSpinRecovery struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSStabilityControl struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSStartEngine struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSSteeringHelp struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSThrottleControl struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseDRIVEAIDSVisFastLine struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTAiAggression struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTAiDriverstrength struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastCustomCameras struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastGroupLap1range struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -7976,17 +7976,17 @@ type RestOptionsSettingsResponseGAMEOPTBroadcastGroupLap1range struct {
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastGroupMode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastGroupRange struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -7994,9 +7994,9 @@ type RestOptionsSettingsResponseGAMEOPTBroadcastGroupRange struct {
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastGroupZoommax struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
@@ -8004,7 +8004,7 @@ type RestOptionsSettingsResponseGAMEOPTBroadcastGroupZoommax struct {
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastGroupZoomstrength struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -8012,27 +8012,27 @@ type RestOptionsSettingsResponseGAMEOPTBroadcastGroupZoomstrength struct {
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastPersistentZoom struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastTrackingchangeBlend struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastTrackingchangeMaxtimediff struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
@@ -8040,673 +8040,673 @@ type RestOptionsSettingsResponseGAMEOPTBroadcastTrackingchangeMaxtimediff struct
 
 type RestOptionsSettingsResponseGAMEOPTBroadcastTrackingchangeTimedelay struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTDamagemultiplier struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTDeleteSaveDataRaceEnd struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTEnablePlugins struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTKph struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTKw struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTRememberOnboardChanges struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTSpotterDetail struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTSpotterLaptimes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTTelemetry struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTTransparentTrainerLap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTTransparentTrainerLeadTime struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGAMEOPTUnits struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTCarVibrationMult1 struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverLabels struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayFlags struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayHud struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayInfoCar struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayInfoTiming struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayNotificationsChat struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayNotificationsGame struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayNotificationsRace struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayRadar struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayStandings struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTDriverOverlayTrackmap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTEnvReflections struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTExaggerateYaw struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTExtraVisibleVehicles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTHUDUltrawideRatio struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTHeadPhysics struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTLiveTvDisplays struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTLookaheadRadians struct {
-	CurrentValue int64   `json:"currentValue"`
+	CurrentValue float64 `json:"currentValue"`
 	MaxValue     float64 `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMaxFramerate struct {
-	CurrentValue int64   `json:"currentValue"`
+	CurrentValue float64 `json:"currentValue"`
 	MaxValue     float64 `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMotionblur struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewCenterBezelGap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewCenterEyeDistance struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewCenterScreenHeight struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewCenterScreenWidth struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewCenterSideAngle struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewLeftBezelGap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewLeftEyeDistance struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewLeftScreenHeight struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewLeftScreenWidth struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewLeftSideAngle struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewMode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewRightBezelGap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewRightEyeDistance struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewRightScreenHeight struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewRightScreenWidth struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewRightSideAngle struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewSharedBezelGap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewSharedEyeDistance struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewSharedScreenHeight struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewSharedScreenWidth struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTMultiviewSharedSideAngle struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTOpponentDetail struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTPlayerDetail struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTRainDrops struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTRearview struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTRoadReflections struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTScreenshotDepthAlpha struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTScreenshotFileType struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTShadowBlur struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTShadows struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTSoftParticles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTSpecialfx struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTSsao struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTStabilizeHorizon struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTStartingView struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTSteeringWheel struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTTexture struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTTextureFilter struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTTextureStreaming struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTTrack struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTVRHudDepth struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -8715,7 +8715,7 @@ type RestOptionsSettingsResponseGRAPHOPTVRHudDepth struct {
 
 type RestOptionsSettingsResponseGRAPHOPTVRHudScale struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -8723,9 +8723,9 @@ type RestOptionsSettingsResponseGRAPHOPTVRHudScale struct {
 }
 
 type RestOptionsSettingsResponseGRAPHOPTVRIPDScale struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
@@ -8733,7 +8733,7 @@ type RestOptionsSettingsResponseGRAPHOPTVRIPDScale struct {
 
 type RestOptionsSettingsResponseGRAPHOPTVRMenuDepth struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -8742,7 +8742,7 @@ type RestOptionsSettingsResponseGRAPHOPTVRMenuDepth struct {
 
 type RestOptionsSettingsResponseGRAPHOPTVRMenuScale struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -8750,102 +8750,102 @@ type RestOptionsSettingsResponseGRAPHOPTVRMenuScale struct {
 }
 
 type RestOptionsSettingsResponseGRAPHOPTVfov struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseGRAPHOPTVisibleVehicles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseMPNETWORKConnectionType struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseMPNETWORKDownstream struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseMPNETWORKUpstream struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseMULTIDownloadCustomSkins struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseREPLAYOPTInstantReplay struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseREPLAYOPTRecordHotlaps struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseREPLAYOPTRecordReplays struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseREPLAYOPTReplayFidelity struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAdminFunc struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAdminPassword struct {
@@ -8854,138 +8854,138 @@ type RestOptionsSettingsResponseSERVEROPTAdminPassword struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowAiToggling struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowAnyEvent struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowHotlapCompletion struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowLooseContentTransfer struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowRaceRejoin struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowsDriverHotswap struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAllowsSpectatorChat struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTAssignParking struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTClientFuelVisible struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTClientWait struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTClosedQualifySession struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTClosedRaceSession struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTCollThreshold struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTDedicatedLoadingPrio struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTDedicatedLoadingSleep struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTDefaultName struct {
@@ -8994,48 +8994,48 @@ type RestOptionsSettingsResponseSERVEROPTDefaultName struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTDelayAfterRace struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTDelayBetweenSessions struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTEnableAutodownloads struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTEnforceRealName struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTForceDrivingView struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTHTTPServerDocumentPath struct {
@@ -9044,30 +9044,30 @@ type RestOptionsSettingsResponseSERVEROPTHTTPServerDocumentPath struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTHTTPServerMaxFileSize struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTHTTPServerSendRate struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTIsolationCode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTJoinPassword struct {
@@ -9076,138 +9076,138 @@ type RestOptionsSettingsResponseSERVEROPTJoinPassword struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTLessenRestrictions struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMaxClients struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMaxKbpsPerClient struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMaxVehicles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMaximumAI struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMinimumAI struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTMustBeStopped struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTPauseIfNoHumans struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTPauseStartOfFirstSession struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTPitSpeedOverride struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTPluginHeartbeatRate struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTPractice1Time struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTQualifyLaps struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTQualifyTime struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTSessionEndTimeout struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTSuperadminPassword struct {
@@ -9216,21 +9216,21 @@ type RestOptionsSettingsResponseSERVEROPTSuperadminPassword struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTTestDay struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTUniqueVehicles struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTUnthrottlePrefix struct {
@@ -9239,80 +9239,80 @@ type RestOptionsSettingsResponseSERVEROPTUnthrottlePrefix struct {
 }
 
 type RestOptionsSettingsResponseSERVEROPTVoteMaxRaceRestarts struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTVoteMinVoters struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTVotePctAddai struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTVotePctNextsession struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTVotePctOther struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSERVEROPTWarmupTime struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTChannels struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTEngineVol struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTExternalVolRatio struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
 	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
@@ -9320,45 +9320,45 @@ type RestOptionsSettingsResponseSOUNDOPTExternalVolRatio struct {
 }
 
 type RestOptionsSettingsResponseSOUNDOPTHrtf struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTMasterVol struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTMaxEffects struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTMicMode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTOnboardVol struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
@@ -9366,26 +9366,26 @@ type RestOptionsSettingsResponseSOUNDOPTOnboardVol struct {
 
 type RestOptionsSettingsResponseSOUNDOPTOptionsVol struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTPlayerVolRatio struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTSoundfxVol struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
@@ -9393,164 +9393,164 @@ type RestOptionsSettingsResponseSOUNDOPTSoundfxVol struct {
 
 type RestOptionsSettingsResponseSOUNDOPTSpotterVol struct {
 	CurrentValue float64 `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseSOUNDOPTTireVolRatio struct {
-	CurrentValue int64   `json:"currentValue"`
-	MaxValue     int64   `json:"maxValue"`
-	MinValue     int64   `json:"minValue"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
 	StepValue    float64 `json:"stepValue"`
 	StringValue  string  `json:"stringValue"`
 	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTMULTIVIEW struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTPOSTFXAA struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTPostprocessLevel struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDEOMODE struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDMaxHRes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDMaxVRes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDMinHRes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDMinVRes struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDdriver struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDfsaa struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDrefresh struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDvsync struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDwidescreenHUD struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDwidescreenUI struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVIDwindowMode struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsSettingsResponseVIDEOOPTVRSetting struct {
-	CurrentValue int64  `json:"currentValue"`
-	MaxValue     int64  `json:"maxValue"`
-	MinValue     int64  `json:"minValue"`
-	StepValue    int64  `json:"stepValue"`
-	StringValue  string `json:"stringValue"`
-	ValueType    string `json:"valueType"`
+	CurrentValue float64 `json:"currentValue"`
+	MaxValue     float64 `json:"maxValue"`
+	MinValue     float64 `json:"minValue"`
+	StepValue    float64 `json:"stepValue"`
+	StringValue  string  `json:"stringValue"`
+	ValueType    string  `json:"valueType"`
 }
 
 type RestOptionsUIScreenControlsResponse struct {
@@ -9587,63 +9587,63 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInput s
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputDecrementMotorMap struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputDriverOverlayNextMFD struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputDriverOverlayPreviousMFD struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputIncrementMotorMap struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputLookLeft struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputLookRight struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputPitMenuDec struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputPitMenuDown struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputPitMenuInc struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputPitMenuUp struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputTractionControlDown struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputAlternativeInputTractionControlUp struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevices struct {
@@ -9666,10 +9666,10 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWhee
 	Enabled                   bool    `json:"Enabled"`
 	InvertForceFeedback       bool    `json:"Invert Force Feedback"`
 	JoltMagnitude             float64 `json:"Jolt magnitude"`
-	SteeringBumpStopDegrees   int64   `json:"Steering bump stop degrees"`
-	SteeringEffectsStrength   int64   `json:"Steering effects strength"`
-	SteeringTorqueMinimum     int64   `json:"Steering torque minimum"`
-	SteeringTorqueSensitivity int64   `json:"Steering torque sensitivity"`
+	SteeringBumpStopDegrees   float64 `json:"Steering bump stop degrees"`
+	SteeringEffectsStrength   float64 `json:"Steering effects strength"`
+	SteeringTorqueMinimum     float64 `json:"Steering torque minimum"`
+	SteeringTorqueSensitivity float64 `json:"Steering torque sensitivity"`
 	ConstantSteeringForce     bool    `json:"constant steering force"`
 }
 
@@ -9694,126 +9694,126 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWhee
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRZ struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesRZ2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
-	Min    int64   `json:"min"`
+	Max    float64 `json:"max"`
+	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesS0 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesS02 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
-	Min    int64   `json:"min"`
+	Max    float64 `json:"max"`
+	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesS1 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesS12 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
-	Min    int64   `json:"min"`
+	Max    float64 `json:"max"`
+	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesZ struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EInputAxisPropertiesZ2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705ELayout struct {
-	Axes    int64 `json:"axes"`
-	Buttons int64 `json:"buttons"`
-	Povs    int64 `json:"povs"`
+	Axes    float64 `json:"axes"`
+	Buttons float64 `json:"buttons"`
+	Povs    float64 `json:"povs"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesFANATECWheelFSDeviceWheelDD6129E0E91B9A705EOptions struct {
 	BrakeBiasAxis                          bool    `json:"Brake Bias Axis"`
-	BrakeSensitivity                       int64   `json:"Brake Sensitivity"`
-	ClutchSensitivity                      int64   `json:"Clutch Sensitivity"`
+	BrakeSensitivity                       float64 `json:"Brake Sensitivity"`
+	ClutchSensitivity                      float64 `json:"Clutch Sensitivity"`
 	GearSelectButtonHold                   bool    `json:"Gear Select Button Hold"`
-	Hardware3DigitDisplay                  int64   `json:"Hardware 3Digit Display"`
+	Hardware3DigitDisplay                  float64 `json:"Hardware 3Digit Display"`
 	KeyboardBrake                          float64 `json:"Keyboard Brake"`
 	KeyboardClutch                         float64 `json:"Keyboard Clutch"`
 	KeyboardThrottle                       float64 `json:"Keyboard Throttle"`
 	NeverReleaseDevice                     bool    `json:"Never Release Device"`
-	SensitivityType                        int64   `json:"Sensitivity Type"`
+	SensitivityType                        float64 `json:"Sensitivity Type"`
 	SteeringAggression                     float64 `json:"Steering Aggression"`
 	SteeringRateFactor                     float64 `json:"Steering Rate Factor"`
-	SteeringReturnRateMultiplier           int64   `json:"Steering Return Rate Multiplier"`
-	SteeringSensitivity                    int64   `json:"Steering Sensitivity"`
+	SteeringReturnRateMultiplier           float64 `json:"Steering Return Rate Multiplier"`
+	SteeringSensitivity                    float64 `json:"Steering Sensitivity"`
 	SteeringSnapFactor                     float64 `json:"Steering Snap Factor"`
-	SteeringSpeedSensitivity               int64   `json:"Steering Speed Sensitivity"`
-	SteeringWheelMaximumRotation           int64   `json:"Steering Wheel Maximum Rotation"`
+	SteeringSpeedSensitivity               float64 `json:"Steering Speed Sensitivity"`
+	SteeringWheelMaximumRotation           float64 `json:"Steering Wheel Maximum Rotation"`
 	SteeringWheelMaximumRotationFromDriver bool    `json:"Steering Wheel Maximum Rotation From Driver"`
-	ThrottleSensitivity                    int64   `json:"Throttle Sensitivity"`
+	ThrottleSensitivity                    float64 `json:"Throttle Sensitivity"`
 	UseLeds                                bool    `json:"use leds"`
 }
 
@@ -9829,14 +9829,14 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice9
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412ForceFeedback struct {
-	Enabled                   bool  `json:"Enabled"`
-	InvertForceFeedback       bool  `json:"Invert Force Feedback"`
-	JoltMagnitude             int64 `json:"Jolt magnitude"`
-	SteeringBumpStopDegrees   int64 `json:"Steering bump stop degrees"`
-	SteeringEffectsStrength   int64 `json:"Steering effects strength"`
-	SteeringTorqueMinimum     int64 `json:"Steering torque minimum"`
-	SteeringTorqueSensitivity int64 `json:"Steering torque sensitivity"`
-	ConstantSteeringForce     bool  `json:"constant steering force"`
+	Enabled                   bool    `json:"Enabled"`
+	InvertForceFeedback       bool    `json:"Invert Force Feedback"`
+	JoltMagnitude             float64 `json:"Jolt magnitude"`
+	SteeringBumpStopDegrees   float64 `json:"Steering bump stop degrees"`
+	SteeringEffectsStrength   float64 `json:"Steering effects strength"`
+	SteeringTorqueMinimum     float64 `json:"Steering torque minimum"`
+	SteeringTorqueSensitivity float64 `json:"Steering torque sensitivity"`
+	ConstantSteeringForce     bool    `json:"constant steering force"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisProperties struct {
@@ -9860,126 +9860,126 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice9
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRZ struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesRZ2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesS0 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesS02 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesS1 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesS12 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesZ struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412InputAxisPropertiesZ2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412Layout struct {
-	Axes    int64 `json:"axes"`
-	Buttons int64 `json:"buttons"`
-	Povs    int64 `json:"povs"`
+	Axes    float64 `json:"axes"`
+	Buttons float64 `json:"buttons"`
+	Povs    float64 `json:"povs"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputDevicesVJoyDevice92B70E8405695412Options struct {
 	BrakeBiasAxis                          bool    `json:"Brake Bias Axis"`
-	BrakeSensitivity                       int64   `json:"Brake Sensitivity"`
-	ClutchSensitivity                      int64   `json:"Clutch Sensitivity"`
+	BrakeSensitivity                       float64 `json:"Brake Sensitivity"`
+	ClutchSensitivity                      float64 `json:"Clutch Sensitivity"`
 	GearSelectButtonHold                   bool    `json:"Gear Select Button Hold"`
-	Hardware3DigitDisplay                  int64   `json:"Hardware 3Digit Display"`
+	Hardware3DigitDisplay                  float64 `json:"Hardware 3Digit Display"`
 	KeyboardBrake                          float64 `json:"Keyboard Brake"`
 	KeyboardClutch                         float64 `json:"Keyboard Clutch"`
 	KeyboardThrottle                       float64 `json:"Keyboard Throttle"`
 	NeverReleaseDevice                     bool    `json:"Never Release Device"`
-	SensitivityType                        int64   `json:"Sensitivity Type"`
+	SensitivityType                        float64 `json:"Sensitivity Type"`
 	SteeringAggression                     float64 `json:"Steering Aggression"`
 	SteeringRateFactor                     float64 `json:"Steering Rate Factor"`
-	SteeringReturnRateMultiplier           int64   `json:"Steering Return Rate Multiplier"`
-	SteeringSensitivity                    int64   `json:"Steering Sensitivity"`
+	SteeringReturnRateMultiplier           float64 `json:"Steering Return Rate Multiplier"`
+	SteeringSensitivity                    float64 `json:"Steering Sensitivity"`
 	SteeringSnapFactor                     float64 `json:"Steering Snap Factor"`
-	SteeringSpeedSensitivity               int64   `json:"Steering Speed Sensitivity"`
-	SteeringWheelMaximumRotation           int64   `json:"Steering Wheel Maximum Rotation"`
+	SteeringSpeedSensitivity               float64 `json:"Steering Speed Sensitivity"`
+	SteeringWheelMaximumRotation           float64 `json:"Steering Wheel Maximum Rotation"`
 	SteeringWheelMaximumRotationFromDriver bool    `json:"Steering Wheel Maximum Rotation From Driver"`
-	ThrottleSensitivity                    int64   `json:"Throttle Sensitivity"`
+	ThrottleSensitivity                    float64 `json:"Throttle Sensitivity"`
 	UseLeds                                bool    `json:"use leds"`
 }
 
@@ -10014,138 +10014,138 @@ type RestOptionsUIScreenControlsResponseAllControlsDirectInputInput struct {
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputAlternateEsc struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputBiasForward struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputBiasRearward struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputBrake struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputClutchIn struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputDecrementMotorMap struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputDriverOverlayNextMFD struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputDrivingCameras struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputHeadlights struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputHeadlightsPulse struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputIncrementMotorMap struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputPitMenuDec struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputPitMenuDown struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputPitMenuInc struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputPitMenuUp struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputPitRequest struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputRearLook struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputShiftDown struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputShiftUp struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputSpeedLimiter struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputSteerLeft struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputSteerRight struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputTCOverride struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputThrottle struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputTractionControlDown struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputTractionControlUp struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsDirectInputInputUIMouseClick struct {
-	Device string `json:"device"`
-	Id     int64  `json:"id"`
+	Device string  `json:"device"`
+	Id     float64 `json:"id"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepad struct {
@@ -10166,10 +10166,10 @@ type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceForceFeedback st
 	Enabled                   bool    `json:"Enabled"`
 	InvertForceFeedback       bool    `json:"Invert Force Feedback"`
 	JoltMagnitude             float64 `json:"Jolt magnitude"`
-	SteeringBumpStopDegrees   int64   `json:"Steering bump stop degrees"`
-	SteeringEffectsStrength   int64   `json:"Steering effects strength"`
-	SteeringTorqueMinimum     int64   `json:"Steering torque minimum"`
-	SteeringTorqueSensitivity int64   `json:"Steering torque sensitivity"`
+	SteeringBumpStopDegrees   float64 `json:"Steering bump stop degrees"`
+	SteeringEffectsStrength   float64 `json:"Steering effects strength"`
+	SteeringTorqueMinimum     float64 `json:"Steering torque minimum"`
+	SteeringTorqueSensitivity float64 `json:"Steering torque sensitivity"`
 	ConstantSteeringForce     bool    `json:"constant steering force"`
 }
 
@@ -10188,108 +10188,108 @@ type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropert
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesLeftThumbX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesLeftThumbX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesLeftThumbY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesLeftThumbY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesLeftTrigger struct {
-	Center int64   `json:"center"`
-	Max    int64   `json:"max"`
+	Center float64 `json:"center"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesRightThumbX struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesRightThumbX2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesRightThumbY struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesRightThumbY2 struct {
 	Center float64 `json:"center"`
-	Max    int64   `json:"max"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceInputAxisPropertiesRightTrigger struct {
-	Center int64   `json:"center"`
-	Max    int64   `json:"max"`
+	Center float64 `json:"center"`
+	Max    float64 `json:"max"`
 	Min    float64 `json:"min"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadDeviceOptions struct {
 	BrakeBiasAxis                          bool    `json:"Brake Bias Axis"`
 	BrakeSensitivity                       float64 `json:"Brake Sensitivity"`
-	ClutchSensitivity                      int64   `json:"Clutch Sensitivity"`
+	ClutchSensitivity                      float64 `json:"Clutch Sensitivity"`
 	GearSelectButtonHold                   bool    `json:"Gear Select Button Hold"`
-	Hardware3DigitDisplay                  int64   `json:"Hardware 3Digit Display"`
+	Hardware3DigitDisplay                  float64 `json:"Hardware 3Digit Display"`
 	KeyboardBrake                          float64 `json:"Keyboard Brake"`
 	KeyboardClutch                         float64 `json:"Keyboard Clutch"`
 	KeyboardThrottle                       float64 `json:"Keyboard Throttle"`
 	NeverReleaseDevice                     bool    `json:"Never Release Device"`
-	SensitivityType                        int64   `json:"Sensitivity Type"`
+	SensitivityType                        float64 `json:"Sensitivity Type"`
 	SteeringAggression                     float64 `json:"Steering Aggression"`
 	SteeringRateFactor                     float64 `json:"Steering Rate Factor"`
 	SteeringReturnRateMultiplier           float64 `json:"Steering Return Rate Multiplier"`
 	SteeringSensitivity                    float64 `json:"Steering Sensitivity"`
 	SteeringSnapFactor                     float64 `json:"Steering Snap Factor"`
 	SteeringSpeedSensitivity               float64 `json:"Steering Speed Sensitivity"`
-	SteeringWheelMaximumRotation           int64   `json:"Steering Wheel Maximum Rotation"`
+	SteeringWheelMaximumRotation           float64 `json:"Steering Wheel Maximum Rotation"`
 	SteeringWheelMaximumRotationFromDriver bool    `json:"Steering Wheel Maximum Rotation From Driver"`
 	ThrottleSensitivity                    float64 `json:"Throttle Sensitivity"`
 	UseLeds                                bool    `json:"use leds"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGamepadInput struct {
-	AdjustSeatAft            int64 `json:"Adjust Seat Aft"`
-	AdjustSeatDown           int64 `json:"Adjust Seat Down"`
-	AdjustSeatFore           int64 `json:"Adjust Seat Fore"`
-	AdjustSeatUp             int64 `json:"Adjust Seat Up"`
-	AlternateEsc             int64 `json:"Alternate Esc"`
-	Brake                    int64 `json:"Brake"`
-	DecreaseVerticalFOV      int64 `json:"Decrease Vertical FOV"`
-	DriverOverlayNextMFD     int64 `json:"Driver Overlay Next MFD"`
-	DriverOverlayPreviousMFD int64 `json:"Driver Overlay Previous MFD"`
-	IncreaseVerticalFOV      int64 `json:"Increase Vertical FOV"`
-	LookLeft                 int64 `json:"Look Left"`
-	LookRight                int64 `json:"Look Right"`
-	PitRequest               int64 `json:"Pit Request"`
-	PushToChangeCameraView   int64 `json:"Push To change camera view"`
-	ShiftDown                int64 `json:"Shift Down"`
-	ShiftUp                  int64 `json:"Shift Up"`
-	SpeedLimiter             int64 `json:"Speed Limiter"`
-	SteerLeft                int64 `json:"Steer Left"`
-	SteerRight               int64 `json:"Steer Right"`
-	Throttle                 int64 `json:"Throttle"`
+	AdjustSeatAft            float64 `json:"Adjust Seat Aft"`
+	AdjustSeatDown           float64 `json:"Adjust Seat Down"`
+	AdjustSeatFore           float64 `json:"Adjust Seat Fore"`
+	AdjustSeatUp             float64 `json:"Adjust Seat Up"`
+	AlternateEsc             float64 `json:"Alternate Esc"`
+	Brake                    float64 `json:"Brake"`
+	DecreaseVerticalFOV      float64 `json:"Decrease Vertical FOV"`
+	DriverOverlayNextMFD     float64 `json:"Driver Overlay Next MFD"`
+	DriverOverlayPreviousMFD float64 `json:"Driver Overlay Previous MFD"`
+	IncreaseVerticalFOV      float64 `json:"Increase Vertical FOV"`
+	LookLeft                 float64 `json:"Look Left"`
+	LookRight                float64 `json:"Look Right"`
+	PitRequest               float64 `json:"Pit Request"`
+	PushToChangeCameraView   float64 `json:"Push To change camera view"`
+	ShiftDown                float64 `json:"Shift Down"`
+	ShiftUp                  float64 `json:"Shift Up"`
+	SpeedLimiter             float64 `json:"Speed Limiter"`
+	SteerLeft                float64 `json:"Steer Left"`
+	SteerRight               float64 `json:"Steer Right"`
+	Throttle                 float64 `json:"Throttle"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGlobal struct {
@@ -10299,9 +10299,9 @@ type RestOptionsUIScreenControlsResponseAllControlsGlobal struct {
 	DirectInputFallback               bool                                                              `json:"DirectInput Fallback"`
 	ForceFeedback                     RestOptionsUIScreenControlsResponseAllControlsGlobalForceFeedback `json:"Force Feedback"`
 	RangeFromVehicle                  bool                                                              `json:"Range From Vehicle"`
-	SampleMarginGI                    int64                                                             `json:"Sample Margin GI"`
-	SteeringWheelRange                int64                                                             `json:"Steering Wheel Range"`
-	StopSequentialIfNeutralConfigured int64                                                             `json:"Stop Sequential if Neutral Configured"`
+	SampleMarginGI                    float64                                                           `json:"Sample Margin GI"`
+	SteeringWheelRange                float64                                                           `json:"Steering Wheel Range"`
+	StopSequentialIfNeutralConfigured float64                                                           `json:"Stop Sequential if Neutral Configured"`
 	UseCustomGamepad                  bool                                                              `json:"Use Custom Gamepad"`
 	UseCustomKeyboard                 bool                                                              `json:"Use Custom Keyboard"`
 	UseCustomWheel                    bool                                                              `json:"Use Custom Wheel"`
@@ -10311,33 +10311,33 @@ type RestOptionsUIScreenControlsResponseAllControlsGlobalCamera struct {
 	CameraZoomAccel              float64 `json:"Camera Zoom Accel"`
 	CameraZoomDecel              float64 `json:"Camera Zoom Decel"`
 	CameraZoomSpeed              float64 `json:"Camera Zoom Speed"`
-	FreelookKeyboardPitchAccel   int64   `json:"Freelook Keyboard Pitch Accel"`
-	FreelookKeyboardPitchDecel   int64   `json:"Freelook Keyboard Pitch Decel"`
+	FreelookKeyboardPitchAccel   float64 `json:"Freelook Keyboard Pitch Accel"`
+	FreelookKeyboardPitchDecel   float64 `json:"Freelook Keyboard Pitch Decel"`
 	FreelookKeyboardPitchSpeed   float64 `json:"Freelook Keyboard Pitch Speed"`
-	FreelookKeyboardRollAccel    int64   `json:"Freelook Keyboard Roll Accel"`
-	FreelookKeyboardRollDecel    int64   `json:"Freelook Keyboard Roll Decel"`
+	FreelookKeyboardRollAccel    float64 `json:"Freelook Keyboard Roll Accel"`
+	FreelookKeyboardRollDecel    float64 `json:"Freelook Keyboard Roll Decel"`
 	FreelookKeyboardRollSpeed    float64 `json:"Freelook Keyboard Roll Speed"`
-	FreelookKeyboardYawAccel     int64   `json:"Freelook Keyboard Yaw Accel"`
-	FreelookKeyboardYawDecel     int64   `json:"Freelook Keyboard Yaw Decel"`
+	FreelookKeyboardYawAccel     float64 `json:"Freelook Keyboard Yaw Accel"`
+	FreelookKeyboardYawDecel     float64 `json:"Freelook Keyboard Yaw Decel"`
 	FreelookKeyboardYawSpeed     float64 `json:"Freelook Keyboard Yaw Speed"`
-	FreelookMinimumLodMultiplier int64   `json:"Freelook Minimum Lod Multiplier"`
+	FreelookMinimumLodMultiplier float64 `json:"Freelook Minimum Lod Multiplier"`
 	FreelookMouseControl         bool    `json:"Freelook Mouse Control"`
 	FreelookMousePitchSpeed      float64 `json:"Freelook Mouse Pitch Speed"`
 	FreelookMouseYawSpeed        float64 `json:"Freelook Mouse Yaw Speed"`
-	FreemoveAccel                int64   `json:"Freemove Accel"`
-	FreemoveDecel                int64   `json:"Freemove Decel"`
-	FreemoveDownSpeed            int64   `json:"Freemove Down Speed"`
-	FreemoveForwardSpeed         int64   `json:"Freemove Forward Speed"`
-	FreemoveRightSpeed           int64   `json:"Freemove Right Speed"`
+	FreemoveAccel                float64 `json:"Freemove Accel"`
+	FreemoveDecel                float64 `json:"Freemove Decel"`
+	FreemoveDownSpeed            float64 `json:"Freemove Down Speed"`
+	FreemoveForwardSpeed         float64 `json:"Freemove Forward Speed"`
+	FreemoveRightSpeed           float64 `json:"Freemove Right Speed"`
 	HMDForeAftRange              float64 `json:"HMD Fore/Aft Range"`
 	HMDLeftRightRange            float64 `json:"HMD Left/Right Range"`
 	HMDUpDownRange               float64 `json:"HMD Up/Down Range"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsGlobalForceFeedback struct {
-	SteeringTorqueExtrapBlend   int64   `json:"Steering torque extrap blend"`
+	SteeringTorqueExtrapBlend   float64 `json:"Steering torque extrap blend"`
 	SteeringTorqueExtrapTime    float64 `json:"Steering torque extrap time"`
-	SteeringTorqueFilter        int64   `json:"Steering torque filter"`
+	SteeringTorqueFilter        float64 `json:"Steering torque filter"`
 	SteeringTorqueZeroSpeedMult float64 `json:"Steering torque zero-speed mult"`
 }
 
@@ -10354,78 +10354,78 @@ type RestOptionsUIScreenControlsResponseAllControlsKeyboardDevice struct {
 
 type RestOptionsUIScreenControlsResponseAllControlsKeyboardDeviceOptions struct {
 	BrakeBiasAxis                          bool    `json:"Brake Bias Axis"`
-	BrakeSensitivity                       int64   `json:"Brake Sensitivity"`
-	ClutchSensitivity                      int64   `json:"Clutch Sensitivity"`
+	BrakeSensitivity                       float64 `json:"Brake Sensitivity"`
+	ClutchSensitivity                      float64 `json:"Clutch Sensitivity"`
 	GearSelectButtonHold                   bool    `json:"Gear Select Button Hold"`
-	Hardware3DigitDisplay                  int64   `json:"Hardware 3Digit Display"`
+	Hardware3DigitDisplay                  float64 `json:"Hardware 3Digit Display"`
 	KeyboardBrake                          float64 `json:"Keyboard Brake"`
 	KeyboardClutch                         float64 `json:"Keyboard Clutch"`
 	KeyboardThrottle                       float64 `json:"Keyboard Throttle"`
 	NeverReleaseDevice                     bool    `json:"Never Release Device"`
-	SensitivityType                        int64   `json:"Sensitivity Type"`
+	SensitivityType                        float64 `json:"Sensitivity Type"`
 	SteeringAggression                     float64 `json:"Steering Aggression"`
 	SteeringRateFactor                     float64 `json:"Steering Rate Factor"`
 	SteeringReturnRateMultiplier           float64 `json:"Steering Return Rate Multiplier"`
 	SteeringSensitivity                    float64 `json:"Steering Sensitivity"`
 	SteeringSnapFactor                     float64 `json:"Steering Snap Factor"`
 	SteeringSpeedSensitivity               float64 `json:"Steering Speed Sensitivity"`
-	SteeringWheelMaximumRotation           int64   `json:"Steering Wheel Maximum Rotation"`
+	SteeringWheelMaximumRotation           float64 `json:"Steering Wheel Maximum Rotation"`
 	SteeringWheelMaximumRotationFromDriver bool    `json:"Steering Wheel Maximum Rotation From Driver"`
-	ThrottleSensitivity                    int64   `json:"Throttle Sensitivity"`
+	ThrottleSensitivity                    float64 `json:"Throttle Sensitivity"`
 	UseLeds                                bool    `json:"use leds"`
 }
 
 type RestOptionsUIScreenControlsResponseAllControlsKeyboardInput struct {
-	AdjustSeatAft                   int64 `json:"Adjust Seat Aft"`
-	AdjustSeatDown                  int64 `json:"Adjust Seat Down"`
-	AdjustSeatFore                  int64 `json:"Adjust Seat Fore"`
-	AdjustSeatUp                    int64 `json:"Adjust Seat Up"`
-	AntilockBrakeSystemDown         int64 `json:"Antilock Brake System Down"`
-	AntilockBrakeSystemUp           int64 `json:"Antilock Brake System Up"`
-	Brake                           int64 `json:"Brake"`
-	CPUTime                         int64 `json:"CPU Time"`
-	DecreaseVerticalFOV             int64 `json:"Decrease Vertical FOV"`
-	DisplayVehicleLabels            int64 `json:"Display Vehicle Labels"`
-	DriverOverlayCycleStandingsData int64 `json:"Driver Overlay Cycle Standings Data"`
-	DriverOverlayCycleTrackMap      int64 `json:"Driver Overlay Cycle Track Map"`
-	DriverOverlayNextMFD            int64 `json:"Driver Overlay Next MFD"`
-	DriverOverlayPreviousMFD        int64 `json:"Driver Overlay Previous MFD"`
-	DriverOverlayToggleHUD          int64 `json:"Driver Overlay Toggle HUD"`
-	DrivingCameras                  int64 `json:"Driving Cameras"`
-	Framerate                       int64 `json:"Framerate"`
-	Headlights                      int64 `json:"Headlights"`
-	IncreaseVerticalFOV             int64 `json:"Increase Vertical FOV"`
-	InstantReplay                   int64 `json:"Instant Replay"`
-	LaunchControl                   int64 `json:"Launch Control"`
-	Neutral                         int64 `json:"Neutral"`
-	OnboardCameras                  int64 `json:"Onboard Cameras"`
-	PitMenuDec                      int64 `json:"Pit Menu Dec"`
-	PitMenuDown                     int64 `json:"Pit Menu Down"`
-	PitMenuInc                      int64 `json:"Pit Menu Inc"`
-	PitMenuUp                       int64 `json:"Pit Menu Up"`
-	PitRequest                      int64 `json:"Pit Request"`
-	QuickChat1                      int64 `json:"Quick Chat #1"`
-	QuickChat12                     int64 `json:"Quick Chat #12"`
-	QuickChat7                      int64 `json:"Quick Chat #7"`
-	ResetDeltaTargetLaptime         int64 `json:"Reset Delta Target Laptime"`
-	ResetForceFeedback              int64 `json:"Reset Force Feedback"`
-	RestartRace                     int64 `json:"Restart Race"`
-	Screenshot                      int64 `json:"Screenshot"`
-	SkipFormation                   int64 `json:"Skip Formation"`
-	SpectatorCameras                int64 `json:"Spectator Cameras"`
-	SteerLeft                       int64 `json:"Steer Left"`
-	SteerRight                      int64 `json:"Steer Right"`
-	SwingmanCamera                  int64 `json:"Swingman Camera"`
-	ToggleAIControl                 int64 `json:"Toggle AI Control"`
-	ToggleCursor                    int64 `json:"Toggle Cursor"`
-	ToggleMirror                    int64 `json:"Toggle Mirror"`
-	TrackingCameras                 int64 `json:"Tracking Cameras"`
-	TractionControl2Down            int64 `json:"Traction Control 2 Down"`
-	TractionControl2Up              int64 `json:"Traction Control 2 Up"`
-	TractionControlDown             int64 `json:"Traction Control Down"`
-	TractionControlUp               int64 `json:"Traction Control Up"`
-	TriplesAndTires                 int64 `json:"Triples And Tires"`
-	Wipers                          int64 `json:"Wipers"`
+	AdjustSeatAft                   float64 `json:"Adjust Seat Aft"`
+	AdjustSeatDown                  float64 `json:"Adjust Seat Down"`
+	AdjustSeatFore                  float64 `json:"Adjust Seat Fore"`
+	AdjustSeatUp                    float64 `json:"Adjust Seat Up"`
+	AntilockBrakeSystemDown         float64 `json:"Antilock Brake System Down"`
+	AntilockBrakeSystemUp           float64 `json:"Antilock Brake System Up"`
+	Brake                           float64 `json:"Brake"`
+	CPUTime                         float64 `json:"CPU Time"`
+	DecreaseVerticalFOV             float64 `json:"Decrease Vertical FOV"`
+	DisplayVehicleLabels            float64 `json:"Display Vehicle Labels"`
+	DriverOverlayCycleStandingsData float64 `json:"Driver Overlay Cycle Standings Data"`
+	DriverOverlayCycleTrackMap      float64 `json:"Driver Overlay Cycle Track Map"`
+	DriverOverlayNextMFD            float64 `json:"Driver Overlay Next MFD"`
+	DriverOverlayPreviousMFD        float64 `json:"Driver Overlay Previous MFD"`
+	DriverOverlayToggleHUD          float64 `json:"Driver Overlay Toggle HUD"`
+	DrivingCameras                  float64 `json:"Driving Cameras"`
+	Framerate                       float64 `json:"Framerate"`
+	Headlights                      float64 `json:"Headlights"`
+	IncreaseVerticalFOV             float64 `json:"Increase Vertical FOV"`
+	InstantReplay                   float64 `json:"Instant Replay"`
+	LaunchControl                   float64 `json:"Launch Control"`
+	Neutral                         float64 `json:"Neutral"`
+	OnboardCameras                  float64 `json:"Onboard Cameras"`
+	PitMenuDec                      float64 `json:"Pit Menu Dec"`
+	PitMenuDown                     float64 `json:"Pit Menu Down"`
+	PitMenuInc                      float64 `json:"Pit Menu Inc"`
+	PitMenuUp                       float64 `json:"Pit Menu Up"`
+	PitRequest                      float64 `json:"Pit Request"`
+	QuickChat1                      float64 `json:"Quick Chat #1"`
+	QuickChat12                     float64 `json:"Quick Chat #12"`
+	QuickChat7                      float64 `json:"Quick Chat #7"`
+	ResetDeltaTargetLaptime         float64 `json:"Reset Delta Target Laptime"`
+	ResetForceFeedback              float64 `json:"Reset Force Feedback"`
+	RestartRace                     float64 `json:"Restart Race"`
+	Screenshot                      float64 `json:"Screenshot"`
+	SkipFormation                   float64 `json:"Skip Formation"`
+	SpectatorCameras                float64 `json:"Spectator Cameras"`
+	SteerLeft                       float64 `json:"Steer Left"`
+	SteerRight                      float64 `json:"Steer Right"`
+	SwingmanCamera                  float64 `json:"Swingman Camera"`
+	ToggleAIControl                 float64 `json:"Toggle AI Control"`
+	ToggleCursor                    float64 `json:"Toggle Cursor"`
+	ToggleMirror                    float64 `json:"Toggle Mirror"`
+	TrackingCameras                 float64 `json:"Tracking Cameras"`
+	TractionControl2Down            float64 `json:"Traction Control 2 Down"`
+	TractionControl2Up              float64 `json:"Traction Control 2 Up"`
+	TractionControlDown             float64 `json:"Traction Control Down"`
+	TractionControlUp               float64 `json:"Traction Control Up"`
+	TriplesAndTires                 float64 `json:"Triples And Tires"`
+	Wipers                          float64 `json:"Wipers"`
 }
 
 type RestProfileGetAuthSessionTicketResponse struct {
@@ -10448,7 +10448,7 @@ type RestProfileResponse struct {
 
 type RestRaceCarResponseItem struct {
 	DisplayProperties RestRaceCarResponseItemDisplayProperties `json:"displayProperties"`
-	DlcappID          int64                                    `json:"dlcappID"`
+	DlcappID          float64                                  `json:"dlcappID"`
 	Engine            string                                   `json:"engine"`
 	FullPathTree      string                                   `json:"fullPathTree"`
 	Id                string                                   `json:"id"`
@@ -10456,7 +10456,7 @@ type RestRaceCarResponseItem struct {
 	Manufacturer      string                                   `json:"manufacturer"`
 	Name              string                                   `json:"name"`
 	Owned             bool                                     `json:"owned"`
-	PremId            int64                                    `json:"premId"`
+	PremId            float64                                  `json:"premId"`
 	Sig               string                                   `json:"sig"`
 	Thumbnail         string                                   `json:"thumbnail"`
 	VehFile           string                                   `json:"vehFile"`
@@ -10469,13 +10469,13 @@ type RestRaceCarResponseItemDisplayProperties struct {
 
 type RestRaceTrackResponseItem struct {
 	DisplayProperties RestRaceTrackResponseItemDisplayProperties `json:"displayProperties"`
-	DlcappID          int64                                      `json:"dlcappID"`
+	DlcappID          float64                                    `json:"dlcappID"`
 	Id                string                                     `json:"id"`
 	Image             string                                     `json:"image"`
 	Length            string                                     `json:"length"`
 	Name              string                                     `json:"name"`
 	Owned             bool                                       `json:"owned"`
-	PremId            int64                                      `json:"premId"`
+	PremId            float64                                    `json:"premId"`
 	SceneDesc         string                                     `json:"sceneDesc"`
 	ShortName         string                                     `json:"shortName"`
 	Thumbnail         string                                     `json:"thumbnail"`
@@ -10493,17 +10493,17 @@ type RestReplayCameraControllerGetCameraInfoResponse struct {
 }
 
 type RestSessionsAmountResponse struct {
-	PRACTICE int64 `json:"PRACTICE"`
-	QUALIFY  int64 `json:"QUALIFY"`
-	RACE     int64 `json:"RACE"`
-	WARMUP   int64 `json:"WARMUP"`
+	PRACTICE float64 `json:"PRACTICE"`
+	QUALIFY  float64 `json:"QUALIFY"`
+	RACE     float64 `json:"RACE"`
+	WARMUP   float64 `json:"WARMUP"`
 }
 
 type RestSessionsGetAllVehiclesResponseItem struct {
 	Classes          []string                                            `json:"classes"`
 	ClassesOverride  string                                              `json:"classesOverride"`
 	Desc             string                                              `json:"desc"`
-	DlcAppID         int64                                               `json:"dlcAppID"`
+	DlcAppID         float64                                             `json:"dlcAppID"`
 	Drivers          []RestSessionsGetAllVehiclesResponseItemDriversItem `json:"drivers"`
 	Engine           string                                              `json:"engine"`
 	FullPathTree     string                                              `json:"fullPathTree"`
@@ -10513,7 +10513,7 @@ type RestSessionsGetAllVehiclesResponseItem struct {
 	LiveryName       string                                              `json:"liveryName"`
 	Manufacturer     string                                              `json:"manufacturer"`
 	Number           string                                              `json:"number"`
-	PremID           int64                                               `json:"premID"`
+	PremID           float64                                             `json:"premID"`
 	PrimaryVehFile   bool                                                `json:"primaryVehFile"`
 	Sig              string                                              `json:"sig"`
 	Team             string                                              `json:"team"`
@@ -10546,14 +10546,14 @@ type RestSessionsGetGameStateResponse struct {
 }
 
 type RestSessionsGetGameStateResponseCloseestWeatherNode struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsGetSessionsInfoForEventResponse struct {
@@ -10561,25 +10561,25 @@ type RestSessionsGetSessionsInfoForEventResponse struct {
 }
 
 type RestSessionsGetSessionsInfoForEventResponseScheduledSessionsItem struct {
-	AirTemp    int64  `json:"airTemp"`
-	LengthTime int64  `json:"lengthTime"`
-	Name       string `json:"name"`
-	RainChance int64  `json:"rainChance"`
+	AirTemp    float64 `json:"airTemp"`
+	LengthTime float64 `json:"lengthTime"`
+	Name       string  `json:"name"`
+	RainChance float64 `json:"rainChance"`
 }
 
 type RestSessionsGetTracksInSeriesResponseItem struct {
 	CmpName                  string                                                                `json:"cmpName"`
 	Corners                  string                                                                `json:"corners"`
 	CountryCode              string                                                                `json:"countryCode"`
-	DefaultPracticeStartTime int64                                                                 `json:"defaultPracticeStartTime"`
+	DefaultPracticeStartTime float64                                                               `json:"defaultPracticeStartTime"`
 	DefaultPracticeWeather   []RestSessionsGetTracksInSeriesResponseItemDefaultPracticeWeatherItem `json:"defaultPracticeWeather"`
-	DefaultQualifyStartTime  int64                                                                 `json:"defaultQualifyStartTime"`
+	DefaultQualifyStartTime  float64                                                               `json:"defaultQualifyStartTime"`
 	DefaultQualifyWeather    []RestSessionsGetTracksInSeriesResponseItemDefaultQualifyWeatherItem  `json:"defaultQualifyWeather"`
-	DefaultRaceLengthLaps    int64                                                                 `json:"defaultRaceLengthLaps"`
-	DefaultRaceLengthTime    int64                                                                 `json:"defaultRaceLengthTime"`
-	DefaultRaceStartTime     int64                                                                 `json:"defaultRaceStartTime"`
+	DefaultRaceLengthLaps    float64                                                               `json:"defaultRaceLengthLaps"`
+	DefaultRaceLengthTime    float64                                                               `json:"defaultRaceLengthTime"`
+	DefaultRaceStartTime     float64                                                               `json:"defaultRaceStartTime"`
 	DefaultRaceWeather       []RestSessionsGetTracksInSeriesResponseItemDefaultRaceWeatherItem     `json:"defaultRaceWeather"`
-	DlcAppID                 int64                                                                 `json:"dlcAppID"`
+	DlcAppID                 float64                                                               `json:"dlcAppID"`
 	EventName                string                                                                `json:"eventName"`
 	GrandPrixName            string                                                                `json:"grandPrixName"`
 	Id                       string                                                                `json:"id"`
@@ -10588,7 +10588,7 @@ type RestSessionsGetTracksInSeriesResponseItem struct {
 	Location                 string                                                                `json:"location"`
 	OfficialEvent            bool                                                                  `json:"officialEvent"`
 	OpeningYear              string                                                                `json:"openingYear"`
-	PremId                   int64                                                                 `json:"premId"`
+	PremId                   float64                                                               `json:"premId"`
 	ProperTrackName          string                                                                `json:"properTrackName"`
 	SceneDesc                string                                                                `json:"sceneDesc"`
 	SceneSig                 string                                                                `json:"sceneSig"`
@@ -10600,46 +10600,46 @@ type RestSessionsGetTracksInSeriesResponseItem struct {
 }
 
 type RestSessionsGetTracksInSeriesResponseItemDefaultPracticeWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsGetTracksInSeriesResponseItemDefaultQualifyWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsGetTracksInSeriesResponseItemDefaultRaceWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsOpponentsAllResponseItem struct {
-	Id   int64  `json:"id"`
-	Name string `json:"name"`
+	Id   float64 `json:"id"`
+	Name string  `json:"name"`
 }
 
 type RestSessionsOpponentsResponseItem struct {
-	Id   int64  `json:"id"`
-	Name string `json:"name"`
+	Id   float64 `json:"id"`
+	Name string  `json:"name"`
 }
 
 type RestSessionsResponse struct {
@@ -10708,561 +10708,561 @@ type RestSessionsResponse struct {
 }
 
 type RestSessionsResponseSESSSETAIAggression struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETAIStrength struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETAdjustFrozen struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETBlueFlags struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETCutRules struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETCutsAllowed struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETDamageMulti struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETFinishCriteria struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETFlagRules struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETForceFormation struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETFormation struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETFuelUsage struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETGridPosition struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETKeepTireInvOnTrackChange struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETMechFailures struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETNumOpponents struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETNumQualSessions struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETNumRaceSessions struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETParcFerme struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract1 struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract1RealroadInit struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract1RealroadTemperatures struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract1RealroadWet struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract2 struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract3 struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPract4 struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPractice1StartingTime struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPracticeLength struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPrivatePrac struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETPrivateQual struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETQual1RealroadInit struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETQual1RealroadTemperatures struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETQual1RealroadWet struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETQualifyLength struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETQualifyStartingTime struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceLaps struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceRealroadInit struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceRealroadTemperatures struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceRealroadWet struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceStartingTime struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceTime struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceTimer struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRaceTimescale struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRealroadTimescalePractice struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRealroadTimescaleQualify struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRealroadTimescaleRace struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETReconPitClosed struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETReconPitOpen struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETReconTimer struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETReconnaissance struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETRunWarmup struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETSafetycarThresh struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETSafetycarcollision struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETTimescaledWeather struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETTireWarmers struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETTireWear struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETTiresAvailableInGarage struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETUnsportsmanlike struct {
 	CurrentValue    float64 `json:"currentValue"`
-	NumStepsTotal   int64   `json:"numStepsTotal"`
-	SettingID       int64   `json:"settingID"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
 	StringValue     string  `json:"stringValue"`
 	UiSelectionType string  `json:"uiSelectionType"`
 	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETWalkthrough struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETWarmUpLength struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETWarmupStartingTime struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsResponseSESSSETWeather struct {
-	CurrentValue    int64  `json:"currentValue"`
-	NumStepsTotal   int64  `json:"numStepsTotal"`
-	SettingID       int64  `json:"settingID"`
-	StringValue     string `json:"stringValue"`
-	UiSelectionType string `json:"uiSelectionType"`
-	ValueType       string `json:"valueType"`
+	CurrentValue    float64 `json:"currentValue"`
+	NumStepsTotal   float64 `json:"numStepsTotal"`
+	SettingID       float64 `json:"settingID"`
+	StringValue     string  `json:"stringValue"`
+	UiSelectionType string  `json:"uiSelectionType"`
+	ValueType       string  `json:"valueType"`
 }
 
 type RestSessionsRestartStintAvailableResponse struct {
@@ -11276,29 +11276,29 @@ type RestSessionsSaveLoadGetSaveJSONResponse struct {
 	Weather               []RestSessionsSaveLoadGetSaveJSONResponseWeatherItem         `json:"Weather"`
 	AiVehicles            []interface{}                                                `json:"aiVehicles"`
 	AllowedVehiclesFilter RestSessionsSaveLoadGetSaveJSONResponseAllowedVehiclesFilter `json:"allowedVehiclesFilter"`
-	CloudCoverage         int64                                                        `json:"cloudCoverage"`
+	CloudCoverage         float64                                                      `json:"cloudCoverage"`
 	Coop                  interface{}                                                  `json:"coop"`
 	CoopGameID            string                                                       `json:"coopGameID"`
-	CurrentSession        int64                                                        `json:"currentSession"`
-	CurrentTemp           int64                                                        `json:"currentTemp"`
-	EndET                 int64                                                        `json:"endET"`
-	GamePhase             int64                                                        `json:"gamePhase"`
-	GreenET               int64                                                        `json:"greenET"`
-	MaxLaps               int64                                                        `json:"maxLaps"`
-	PitExitLight          int64                                                        `json:"pitExitLight"`
+	CurrentSession        float64                                                      `json:"currentSession"`
+	CurrentTemp           float64                                                      `json:"currentTemp"`
+	EndET                 float64                                                      `json:"endET"`
+	GamePhase             float64                                                      `json:"gamePhase"`
+	GreenET               float64                                                      `json:"greenET"`
+	MaxLaps               float64                                                      `json:"maxLaps"`
+	PitExitLight          float64                                                      `json:"pitExitLight"`
 	PlayerVehicle         RestSessionsSaveLoadGetSaveJSONResponsePlayerVehicle         `json:"playerVehicle"`
-	RainIntensity         int64                                                        `json:"rainIntensity"`
-	Raining               int64                                                        `json:"raining"`
-	RedLightET            int64                                                        `json:"redLightET"`
-	SaveVersion           int64                                                        `json:"saveVersion"`
-	SessionET             int64                                                        `json:"sessionET"`
+	RainIntensity         float64                                                      `json:"rainIntensity"`
+	Raining               float64                                                      `json:"raining"`
+	RedLightET            float64                                                      `json:"redLightET"`
+	SaveVersion           float64                                                      `json:"saveVersion"`
+	SessionET             float64                                                      `json:"sessionET"`
 	SessionFinished       bool                                                         `json:"sessionFinished"`
-	SessionState          int64                                                        `json:"sessionState"`
-	SessionTimescale      int64                                                        `json:"sessionTimescale"`
-	StartET               int64                                                        `json:"startET"`
-	StartTime             int64                                                        `json:"startTime"`
-	TimeOfDay             int64                                                        `json:"timeOfDay"`
-	UniqueSessionID       int64                                                        `json:"uniqueSessionID"`
+	SessionState          float64                                                      `json:"sessionState"`
+	SessionTimescale      float64                                                      `json:"sessionTimescale"`
+	StartET               float64                                                      `json:"startET"`
+	StartTime             float64                                                      `json:"startTime"`
+	TimeOfDay             float64                                                      `json:"timeOfDay"`
+	UniqueSessionID       float64                                                      `json:"uniqueSessionID"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseAllowedVehiclesFilter struct {
@@ -11307,7 +11307,7 @@ type RestSessionsSaveLoadGetSaveJSONResponseAllowedVehiclesFilter struct {
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponsePlayerVehicle struct {
-	SlotID int64 `json:"slotID"`
+	SlotID float64 `json:"slotID"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPreset struct {
@@ -11330,32 +11330,32 @@ type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerDRIVER struct {
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerGameOptions struct {
 	AllowedVehicles                        RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerGameOptionsAllowedVehicles `json:"Allowed Vehicles"`
-	CrashRecovery                          int64                                                                                `json:"CrashRecovery"`
-	DamageMultiplier                       int64                                                                                `json:"Damage Multiplier"`
-	DriversPerVehicleAI                    int64                                                                                `json:"Drivers Per Vehicle AI"`
-	DriversPerVehiclePlayer                int64                                                                                `json:"Drivers Per Vehicle Player"`
+	CrashRecovery                          float64                                                                              `json:"CrashRecovery"`
+	DamageMultiplier                       float64                                                                              `json:"Damage Multiplier"`
+	DriversPerVehicleAI                    float64                                                                              `json:"Drivers Per Vehicle AI"`
+	DriversPerVehiclePlayer                float64                                                                              `json:"Drivers Per Vehicle Player"`
 	EquippedScenarioPlans                  string                                                                               `json:"Equipped Scenario Plans"`
-	FreeSettings                           int64                                                                                `json:"FreeSettings"`
-	FuelConsumptionMultiplier              int64                                                                                `json:"Fuel Consumption Multiplier"`
-	LimitedTireRulesTiresAvailableInGarage int64                                                                                `json:"Limited Tire Rules Tires Available In Garage"`
-	MinDriveTimeAllowedFor2DriverTeams     int64                                                                                `json:"Min drive time allowed for 2 driver teams"`
-	MinDriveTimeAllowedFor3DriverTeams     int64                                                                                `json:"Min drive time allowed for 3 driver teams"`
+	FreeSettings                           float64                                                                              `json:"FreeSettings"`
+	FuelConsumptionMultiplier              float64                                                                              `json:"Fuel Consumption Multiplier"`
+	LimitedTireRulesTiresAvailableInGarage float64                                                                              `json:"Limited Tire Rules Tires Available In Garage"`
+	MinDriveTimeAllowedFor2DriverTeams     float64                                                                              `json:"Min drive time allowed for 2 driver teams"`
+	MinDriveTimeAllowedFor3DriverTeams     float64                                                                              `json:"Min drive time allowed for 3 driver teams"`
 	MultiSessionResults                    bool                                                                                 `json:"Multi-session Results"`
-	Opponents                              int64                                                                                `json:"Opponents"`
-	QualifyingLaps                         int64                                                                                `json:"Qualifying Laps"`
-	RaceFinishCriteria                     int64                                                                                `json:"Race Finish Criteria"`
-	RaceLaps                               int64                                                                                `json:"Race Laps"`
+	Opponents                              float64                                                                              `json:"Opponents"`
+	QualifyingLaps                         float64                                                                              `json:"Qualifying Laps"`
+	RaceFinishCriteria                     float64                                                                              `json:"Race Finish Criteria"`
+	RaceLaps                               float64                                                                              `json:"Race Laps"`
 	RaceLength                             float64                                                                              `json:"Race Length"`
-	RaceTime                               int64                                                                                `json:"Race Time"`
-	SpeedCompensation                      int64                                                                                `json:"Speed Compensation"`
-	StartingPos                            int64                                                                                `json:"Starting Pos"`
+	RaceTime                               float64                                                                              `json:"Race Time"`
+	SpeedCompensation                      float64                                                                              `json:"Speed Compensation"`
+	StartingPos                            float64                                                                              `json:"Starting Pos"`
 	StopGoPenalties                        bool                                                                                 `json:"Stop go penalties"`
 	TireWarmers                            bool                                                                                 `json:"Tire Warmers"`
-	TireWearMultiplier                     int64                                                                                `json:"Tire Wear Multiplier"`
+	TireWearMultiplier                     float64                                                                              `json:"Tire Wear Multiplier"`
 	VehicleClassesAffectedByDriveTime      string                                                                               `json:"Vehicle classes affected by drive time"`
-	PracticeLength                         int64                                                                                `json:"practice length"`
-	QualifyingLength                       int64                                                                                `json:"qualifying length"`
-	WarmupLength                           int64                                                                                `json:"warmup length"`
+	PracticeLength                         float64                                                                              `json:"practice length"`
+	QualifyingLength                       float64                                                                              `json:"qualifying length"`
+	WarmupLength                           float64                                                                              `json:"warmup length"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerGameOptionsAllowedVehicles struct {
@@ -11364,45 +11364,45 @@ type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerGameOptionsAllowe
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerMechanicalFailures struct {
-	FailureRate int64 `json:"Failure Rate"`
+	FailureRate float64 `json:"Failure Rate"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerRaceConditions struct {
-	BlueFlags                   int64   `json:"BlueFlags"`
-	FlagRules                   int64   `json:"Flag Rules"`
-	ForceFormation              int64   `json:"Force Formation"`
-	FormationLap                int64   `json:"Formation Lap"`
-	GridWalkthrough             int64   `json:"Grid Walkthrough"`
-	NumQualSessions             int64   `json:"Num Qual Sessions"`
-	NumRaceSessions             int64   `json:"Num Race Sessions"`
-	ParcFerme                   int64   `json:"ParcFerme"`
-	Practice1StartingTime       int64   `json:"Practice1StartingTime"`
+	BlueFlags                   float64 `json:"BlueFlags"`
+	FlagRules                   float64 `json:"Flag Rules"`
+	ForceFormation              float64 `json:"Force Formation"`
+	FormationLap                float64 `json:"Formation Lap"`
+	GridWalkthrough             float64 `json:"Grid Walkthrough"`
+	NumQualSessions             float64 `json:"Num Qual Sessions"`
+	NumRaceSessions             float64 `json:"Num Race Sessions"`
+	ParcFerme                   float64 `json:"ParcFerme"`
+	Practice1StartingTime       float64 `json:"Practice1StartingTime"`
 	PrivatePractice             bool    `json:"PrivatePractice"`
-	PrivateQualifying           int64   `json:"PrivateQualifying"`
-	QualifyingStartingTime      int64   `json:"QualifyingStartingTime"`
-	RaceTimer                   int64   `json:"Race Timer"`
-	RaceStartingTime            int64   `json:"RaceStartingTime"`
-	RaceTimeScale               int64   `json:"RaceTimeScale"`
-	RealRoadTimeScalePractice   int64   `json:"RealRoadTimeScalePractice"`
-	RealRoadTimeScaleQualifying int64   `json:"RealRoadTimeScaleQualifying"`
-	RealRoadTimeScaleRace       int64   `json:"RealRoadTimeScaleRace"`
-	ReconPitClosed              int64   `json:"Recon Pit Closed"`
-	ReconPitOpen                int64   `json:"Recon Pit Open"`
+	PrivateQualifying           float64 `json:"PrivateQualifying"`
+	QualifyingStartingTime      float64 `json:"QualifyingStartingTime"`
+	RaceTimer                   float64 `json:"Race Timer"`
+	RaceStartingTime            float64 `json:"RaceStartingTime"`
+	RaceTimeScale               float64 `json:"RaceTimeScale"`
+	RealRoadTimeScalePractice   float64 `json:"RealRoadTimeScalePractice"`
+	RealRoadTimeScaleQualifying float64 `json:"RealRoadTimeScaleQualifying"`
+	RealRoadTimeScaleRace       float64 `json:"RealRoadTimeScaleRace"`
+	ReconPitClosed              float64 `json:"Recon Pit Closed"`
+	ReconPitOpen                float64 `json:"Recon Pit Open"`
 	ReconTimer                  bool    `json:"Recon Timer"`
-	Reconnaissance              int64   `json:"Reconnaissance"`
+	Reconnaissance              float64 `json:"Reconnaissance"`
 	RunPractice1                bool    `json:"Run Practice1"`
 	RunPractice2                bool    `json:"Run Practice2"`
 	RunPractice3                bool    `json:"Run Practice3"`
 	RunPractice4                bool    `json:"Run Practice4"`
 	RunWarmup                   bool    `json:"Run Warmup"`
 	SafetyCarCollidable         bool    `json:"Safety Car Collidable"`
-	SafetyCarThresh             int64   `json:"Safety Car Thresh"`
+	SafetyCarThresh             float64 `json:"Safety Car Thresh"`
 	TimeScaledWeather           bool    `json:"TimeScaledWeather"`
-	TrackLimitsPointsAllowed    int64   `json:"Track Limits Points Allowed"`
-	TrackLimitsRules            int64   `json:"Track Limits Rules"`
+	TrackLimitsPointsAllowed    float64 `json:"Track Limits Points Allowed"`
+	TrackLimitsRules            float64 `json:"Track Limits Rules"`
 	UnsportsmanlikeSensitivity  float64 `json:"Unsportsmanlike Sensitivity"`
-	WarmupStartingTime          int64   `json:"WarmupStartingTime"`
-	Weather                     int64   `json:"Weather"`
+	WarmupStartingTime          float64 `json:"WarmupStartingTime"`
+	Weather                     float64 `json:"Weather"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetPlayerSCENE struct {
@@ -11430,14 +11430,14 @@ type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherPracticeRoad str
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherPracticeWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherQualifying struct {
@@ -11452,14 +11452,14 @@ type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherQualifyingRoad s
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherQualifyingWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherRace struct {
@@ -11474,20 +11474,20 @@ type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherRaceRoad struct 
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseSessionPresetWeatherRaceWeatherItem struct {
-	Duration      int64 `json:"Duration"`
-	Humidity      int64 `json:"Humidity"`
-	RainChance    int64 `json:"RainChance"`
-	Sky           int64 `json:"Sky"`
-	StartTime     int64 `json:"StartTime"`
-	Temperature   int64 `json:"Temperature"`
-	WindDirection int64 `json:"WindDirection"`
-	WindSpeed     int64 `json:"WindSpeed"`
+	Duration      float64 `json:"Duration"`
+	Humidity      float64 `json:"Humidity"`
+	RainChance    float64 `json:"RainChance"`
+	Sky           float64 `json:"Sky"`
+	StartTime     float64 `json:"StartTime"`
+	Temperature   float64 `json:"Temperature"`
+	WindDirection float64 `json:"WindDirection"`
+	WindSpeed     float64 `json:"WindSpeed"`
 }
 
 type RestSessionsSaveLoadGetSaveJSONResponseWeatherItem struct {
-	Nodes                string `json:"Nodes"`
-	UnCompressedDataSize int64  `json:"unCompressedDataSize"`
-	UnEncodedDataSize    int64  `json:"unEncodedDataSize"`
+	Nodes                string  `json:"Nodes"`
+	UnCompressedDataSize float64 `json:"unCompressedDataSize"`
+	UnEncodedDataSize    float64 `json:"unEncodedDataSize"`
 }
 
 type RestSessionsWeatherResponse struct {
@@ -11516,43 +11516,43 @@ type RestSessionsWeatherResponsePRACTICEFINISH struct {
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICEFINISHWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25 struct {
@@ -11567,43 +11567,43 @@ type RestSessionsWeatherResponsePRACTICENODE25 struct {
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE25WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50 struct {
@@ -11618,43 +11618,43 @@ type RestSessionsWeatherResponsePRACTICENODE50 struct {
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE50WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75 struct {
@@ -11669,43 +11669,43 @@ type RestSessionsWeatherResponsePRACTICENODE75 struct {
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICENODE75WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTART struct {
@@ -11720,43 +11720,43 @@ type RestSessionsWeatherResponsePRACTICESTART struct {
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponsePRACTICESTARTWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFY struct {
@@ -11779,43 +11779,43 @@ type RestSessionsWeatherResponseQUALIFYFINISH struct {
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYFINISHWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25 struct {
@@ -11830,43 +11830,43 @@ type RestSessionsWeatherResponseQUALIFYNODE25 struct {
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE25WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50 struct {
@@ -11881,43 +11881,43 @@ type RestSessionsWeatherResponseQUALIFYNODE50 struct {
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE50WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75 struct {
@@ -11932,43 +11932,43 @@ type RestSessionsWeatherResponseQUALIFYNODE75 struct {
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYNODE75WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTART struct {
@@ -11983,43 +11983,43 @@ type RestSessionsWeatherResponseQUALIFYSTART struct {
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseQUALIFYSTARTWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACE struct {
@@ -12042,43 +12042,43 @@ type RestSessionsWeatherResponseRACEFINISH struct {
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACEFINISHWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25 struct {
@@ -12093,43 +12093,43 @@ type RestSessionsWeatherResponseRACENODE25 struct {
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE25WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50 struct {
@@ -12144,43 +12144,43 @@ type RestSessionsWeatherResponseRACENODE50 struct {
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE50WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75 struct {
@@ -12195,43 +12195,43 @@ type RestSessionsWeatherResponseRACENODE75 struct {
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACENODE75WNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTART struct {
@@ -12246,53 +12246,53 @@ type RestSessionsWeatherResponseRACESTART struct {
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVDURATION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVHUMIDITY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVRAINCHANCE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVSKY struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVSTARTTIME struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVTEMPERATURE struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVWINDDIRECTION struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestSessionsWeatherResponseRACESTARTWNVWINDSPEED struct {
-	CurrentValue int64  `json:"currentValue"`
-	StringValue  string `json:"stringValue"`
+	CurrentValue float64 `json:"currentValue"`
+	StringValue  string  `json:"stringValue"`
 }
 
 type RestStrategyPitstopEstimateResponse struct {
-	Damage     int64   `json:"damage"`
-	DriverSwap int64   `json:"driverSwap"`
+	Damage     float64 `json:"damage"`
+	DriverSwap float64 `json:"driverSwap"`
 	Fuel       float64 `json:"fuel"`
-	Penalties  int64   `json:"penalties"`
-	Tires      int64   `json:"tires"`
-	Total      int64   `json:"total"`
-	Ve         int64   `json:"ve"`
+	Penalties  float64 `json:"penalties"`
+	Tires      float64 `json:"tires"`
+	Total      float64 `json:"total"`
+	Ve         float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponse struct {
@@ -12323,173 +12323,173 @@ type RestStrategyUsageResponse struct {
 }
 
 type RestStrategyUsageResponseAhmadAlHarthyItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseAndrewGilbertItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseAntaresAuItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseBernardoSousaItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseBrentonGroveItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseEddieCheeverItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseEduardoBarrichelloItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseFinnGehrsitzItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseFranOisHeriauItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseFrancescoCastellacciItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseIanJamesItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseJamesCottinghamItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseJonnyEdgarItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseJosMarALPezItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseLinHodeniusItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseMattBellItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
-}
-
-type RestStrategyUsageResponseMatthiasKuechItem struct {
-	Fuel  float64 `json:"fuel"`
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
-	Tyres []int64 `json:"tyres"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
+type RestStrategyUsageResponseMatthiasKuechItem struct {
+	Fuel  float64   `json:"fuel"`
+	Lap   float64   `json:"lap"`
+	Pit   bool      `json:"pit"`
+	Stint float64   `json:"stint"`
+	Tyres []float64 `json:"tyres"`
+	Ve    float64   `json:"ve"`
+}
+
 type RestStrategyUsageResponseRiccardoAgostiniItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseRuiAndradeItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseRyanHardwickItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseSeanGelaelItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseStefanoGattusoItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseTakeshiKimuraItem struct {
-	Lap   int64   `json:"lap"`
+	Lap   float64 `json:"lap"`
 	Pit   bool    `json:"pit"`
-	Stint int64   `json:"stint"`
+	Stint float64 `json:"stint"`
 	Ve    float64 `json:"ve"`
 }
 
 type RestStrategyUsageResponseTimurBoguslavskiyItem struct {
-	Lap   int64 `json:"lap"`
-	Pit   bool  `json:"pit"`
-	Stint int64 `json:"stint"`
-	Ve    int64 `json:"ve"`
+	Lap   float64 `json:"lap"`
+	Pit   bool    `json:"pit"`
+	Stint float64 `json:"stint"`
+	Ve    float64 `json:"ve"`
 }
 
 type RestWatchReplayGetReplayFolderResponse struct {
@@ -12498,12 +12498,12 @@ type RestWatchReplayGetReplayFolderResponse struct {
 }
 
 type RestWatchReplaysResponseItem struct {
-	Id              int64                                `json:"id"`
+	Id              float64                              `json:"id"`
 	Metadata        RestWatchReplaysResponseItemMetadata `json:"metadata"`
 	ReplayDirectory string                               `json:"replayDirectory"`
 	ReplayName      string                               `json:"replayName"`
-	Size            int64                                `json:"size"`
-	Timestamp       int64                                `json:"timestamp"`
+	Size            float64                              `json:"size"`
+	Timestamp       float64                              `json:"timestamp"`
 }
 
 type RestWatchReplaysResponseItemMetadata struct {
@@ -12512,34 +12512,34 @@ type RestWatchReplaysResponseItemMetadata struct {
 }
 
 type RestWatchSessionInfoResponse struct {
-	AmbientTemp              int64                                      `json:"ambientTemp"`
-	AveragePathWetness       int64                                      `json:"averagePathWetness"`
-	CurrentEventTime         int64                                      `json:"currentEventTime"`
-	DarkCloud                int64                                      `json:"darkCloud"`
-	EndEventTime             int64                                      `json:"endEventTime"`
+	AmbientTemp              float64                                    `json:"ambientTemp"`
+	AveragePathWetness       float64                                    `json:"averagePathWetness"`
+	CurrentEventTime         float64                                    `json:"currentEventTime"`
+	DarkCloud                float64                                    `json:"darkCloud"`
+	EndEventTime             float64                                    `json:"endEventTime"`
 	GameMode                 string                                     `json:"gameMode"`
-	GamePhase                int64                                      `json:"gamePhase"`
+	GamePhase                float64                                    `json:"gamePhase"`
 	InRealtime               bool                                       `json:"inRealtime"`
 	LapDistance              float64                                    `json:"lapDistance"`
-	MaxPathWetness           int64                                      `json:"maxPathWetness"`
-	MaxPlayers               int64                                      `json:"maxPlayers"`
-	MaxTime                  int64                                      `json:"maxTime"`
-	MaximumLaps              int64                                      `json:"maximumLaps"`
-	MinPathWetness           int64                                      `json:"minPathWetness"`
-	NumRedLights             int64                                      `json:"numRedLights"`
-	NumberOfPlayers          int64                                      `json:"numberOfPlayers"`
-	NumberOfVehicles         int64                                      `json:"numberOfVehicles"`
+	MaxPathWetness           float64                                    `json:"maxPathWetness"`
+	MaxPlayers               float64                                    `json:"maxPlayers"`
+	MaxTime                  float64                                    `json:"maxTime"`
+	MaximumLaps              float64                                    `json:"maximumLaps"`
+	MinPathWetness           float64                                    `json:"minPathWetness"`
+	NumRedLights             float64                                    `json:"numRedLights"`
+	NumberOfPlayers          float64                                    `json:"numberOfPlayers"`
+	NumberOfVehicles         float64                                    `json:"numberOfVehicles"`
 	PasswordProtected        bool                                       `json:"passwordProtected"`
 	PlayerFileName           string                                     `json:"playerFileName"`
 	PlayerName               string                                     `json:"playerName"`
 	RaceCompletion           RestWatchSessionInfoResponseRaceCompletion `json:"raceCompletion"`
-	Raining                  int64                                      `json:"raining"`
+	Raining                  float64                                    `json:"raining"`
 	SectorFlag               []string                                   `json:"sectorFlag"`
 	ServerName               string                                     `json:"serverName"`
-	ServerPort               int64                                      `json:"serverPort"`
+	ServerPort               float64                                    `json:"serverPort"`
 	Session                  string                                     `json:"session"`
-	StartEventTime           int64                                      `json:"startEventTime"`
-	StartLightFrame          int64                                      `json:"startLightFrame"`
+	StartEventTime           float64                                    `json:"startEventTime"`
+	StartLightFrame          float64                                    `json:"startLightFrame"`
 	TimeRemainingInGamePhase float64                                    `json:"timeRemainingInGamePhase"`
 	TrackName                string                                     `json:"trackName"`
 	TrackTemp                float64                                    `json:"trackTemp"`
@@ -12552,24 +12552,24 @@ type RestWatchSessionInfoResponseRaceCompletion struct {
 }
 
 type RestWatchSessionInfoResponseWindSpeed struct {
-	Velocity int64 `json:"velocity"`
-	X        int64 `json:"x"`
-	Y        int64 `json:"y"`
-	Z        int64 `json:"z"`
+	Velocity float64 `json:"velocity"`
+	X        float64 `json:"x"`
+	Y        float64 `json:"y"`
+	Z        float64 `json:"z"`
 }
 
 type RestWatchStandingsHistoryResponseItemItem struct {
-	CarClass     string `json:"carClass"`
-	DriverName   string `json:"driverName"`
-	FinishStatus string `json:"finishStatus"`
-	LapTime      int64  `json:"lapTime"`
-	Pitting      bool   `json:"pitting"`
-	Position     int64  `json:"position"`
-	SectorTime1  int64  `json:"sectorTime1"`
-	SectorTime2  int64  `json:"sectorTime2"`
-	SlotID       int64  `json:"slotID"`
-	TotalLaps    int64  `json:"totalLaps"`
-	VehicleName  string `json:"vehicleName"`
+	CarClass     string  `json:"carClass"`
+	DriverName   string  `json:"driverName"`
+	FinishStatus string  `json:"finishStatus"`
+	LapTime      float64 `json:"lapTime"`
+	Pitting      bool    `json:"pitting"`
+	Position     float64 `json:"position"`
+	SectorTime1  float64 `json:"sectorTime1"`
+	SectorTime2  float64 `json:"sectorTime2"`
+	SlotID       float64 `json:"slotID"`
+	TotalLaps    float64 `json:"totalLaps"`
+	VehicleName  string  `json:"vehicleName"`
 }
 
 type RestWatchStandingsResponseItem struct {
@@ -12599,32 +12599,32 @@ type RestWatchStandingsResponseItem struct {
 	GamePhase          string                                        `json:"gamePhase"`
 	HasFocus           bool                                          `json:"hasFocus"`
 	Headlights         bool                                          `json:"headlights"`
-	InControl          int64                                         `json:"inControl"`
+	InControl          float64                                       `json:"inControl"`
 	InGarageStall      bool                                          `json:"inGarageStall"`
 	LapDistance        float64                                       `json:"lapDistance"`
 	LapStartET         float64                                       `json:"lapStartET"`
-	LapsBehindLeader   int64                                         `json:"lapsBehindLeader"`
-	LapsBehindNext     int64                                         `json:"lapsBehindNext"`
-	LapsCompleted      int64                                         `json:"lapsCompleted"`
+	LapsBehindLeader   float64                                       `json:"lapsBehindLeader"`
+	LapsBehindNext     float64                                       `json:"lapsBehindNext"`
+	LapsCompleted      float64                                       `json:"lapsCompleted"`
 	LastLapTime        float64                                       `json:"lastLapTime"`
 	LastSectorTime1    float64                                       `json:"lastSectorTime1"`
 	LastSectorTime2    float64                                       `json:"lastSectorTime2"`
 	PathLateral        float64                                       `json:"pathLateral"`
-	Penalties          int64                                         `json:"penalties"`
+	Penalties          float64                                       `json:"penalties"`
 	PitGroup           string                                        `json:"pitGroup"`
 	PitLapDistance     float64                                       `json:"pitLapDistance"`
 	PitState           string                                        `json:"pitState"`
-	Pitstops           int64                                         `json:"pitstops"`
+	Pitstops           float64                                       `json:"pitstops"`
 	Pitting            bool                                          `json:"pitting"`
 	Player             bool                                          `json:"player"`
-	Position           int64                                         `json:"position"`
-	Qualification      int64                                         `json:"qualification"`
+	Position           float64                                       `json:"position"`
+	Qualification      float64                                       `json:"qualification"`
 	Sector             string                                        `json:"sector"`
 	ServerScored       bool                                          `json:"serverScored"`
-	SlotID             int64                                         `json:"slotID"`
-	SteamID            int64                                         `json:"steamID"`
-	TimeBehindLeader   int64                                         `json:"timeBehindLeader"`
-	TimeBehindNext     int64                                         `json:"timeBehindNext"`
+	SlotID             float64                                       `json:"slotID"`
+	SteamID            float64                                       `json:"steamID"`
+	TimeBehindLeader   float64                                       `json:"timeBehindLeader"`
+	TimeBehindNext     float64                                       `json:"timeBehindNext"`
 	TimeIntoLap        float64                                       `json:"timeIntoLap"`
 	TrackEdge          float64                                       `json:"trackEdge"`
 	UnderYellow        bool                                          `json:"underYellow"`
@@ -12634,9 +12634,9 @@ type RestWatchStandingsResponseItem struct {
 }
 
 type RestWatchStandingsResponseItemAttackMode struct {
-	RemainingCount int64 `json:"remainingCount"`
-	TimeRemaining  int64 `json:"timeRemaining"`
-	TotalCount     int64 `json:"totalCount"`
+	RemainingCount float64 `json:"remainingCount"`
+	TimeRemaining  float64 `json:"timeRemaining"`
+	TotalCount     float64 `json:"totalCount"`
 }
 
 type RestWatchStandingsResponseItemCarAcceleration struct {
@@ -12647,7 +12647,7 @@ type RestWatchStandingsResponseItemCarAcceleration struct {
 }
 
 type RestWatchStandingsResponseItemCarPosition struct {
-	Type int64   `json:"type"`
+	Type float64 `json:"type"`
 	X    float64 `json:"x"`
 	Y    float64 `json:"y"`
 	Z    float64 `json:"z"`
@@ -12661,7 +12661,7 @@ type RestWatchStandingsResponseItemCarVelocity struct {
 }
 
 type RestWatchTrackmapResponseItem struct {
-	Type int64   `json:"type"`
+	Type float64 `json:"type"`
 	X    float64 `json:"x"`
 	Y    float64 `json:"y"`
 	Z    float64 `json:"z"`
